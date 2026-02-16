@@ -1,0 +1,106 @@
+{
+  "profile": {
+    "narrative": "This profile is a reflective narrative map of your behavioral patterns. It combines symbolic chart structure with modern psychological language to help you notice how you make decisions, regulate stress, and build relationships over time.",
+    "strengths": [
+      "You can turn self-observation into practical decisions.",
+      "You build momentum when your direction is clear.",
+      "You sustain growth through repeatable routines."
+    ],
+    "risks": [
+      "Under pressure, you may over-control details and lose perspective.",
+      "You may delay difficult conversations to keep short-term harmony.",
+      "You can confuse intensity with urgency and react too quickly."
+    ],
+    "recommendations": [
+      "Choose one weekly priority and protect it with explicit boundaries.",
+      "Use a short reset ritual before high-stakes responses.",
+      "State one need directly in key relationships each week."
+    ]
+  },
+  "extraversion": {
+    "low": {
+      "title": "Extraversion — Low",
+      "shortSummary": "You recharge inwardly and prefer depth over constant stimulation.",
+      "longDescription": "Low Extraversion often means your energy is selective. You may prefer fewer interactions with more meaning, and you might think before you speak rather than processing out loud. This isn’t shyness by default; it’s a temperament that protects focus and depth. In work, it can look like strong independence, careful observation, and thoughtful contribution. Under stress, low Extraversion can flip into withdrawal, delayed communication, or staying silent until frustration builds. A strengths-based approach is to honor your need for recovery while building small rituals for visibility and connection. SDT-wise, you thrive when autonomy is respected (space to work) and relatedness feels safe (no pressure to perform socially).",
+      "howItShowsUp": [
+        "You prefer calm environments and uninterrupted focus",
+        "You choose quality over quantity in relationships",
+        "You contribute best when you have time to think"
+      ],
+      "watchOutFor": [
+        "Ghosting or delaying difficult conversations",
+        "Letting others dominate because you avoid the spotlight",
+        "Misinterpretation: people may read your calm as distance"
+      ],
+      "growthSuggestion": [
+        "Build a small, consistent social rhythm rather than forcing intensity",
+        "Practice concise self-expression (one clear point at a time)"
+      ],
+      "examples": [
+        "In meetings, you wait, then deliver one sharp insight that changes the direction.",
+        "After a social weekend, you need a quiet day to feel like yourself again."
+      ],
+      "microActions": [
+        "Set a ‘one message’ rule: send one clear update instead of waiting for perfect timing.",
+        "After social load, schedule recovery (walk, silence, reading) like a commitment."
+      ]
+    },
+    "mid": {
+      "title": "Extraversion — Mid",
+      "shortSummary": "You can do both: connection and solitude, stimulation and calm.",
+      "longDescription": "Mid Extraversion is flexible. You can enjoy people and activity, but you also value downtime. In Big Five terms, this range often means you can match the situation: energize a room when needed, then step back to think. Your growth edge is intentionality: choosing when to engage and when to protect focus rather than drifting into over-stimulation or under-connection. SDT-wise, you do best when your social choices support autonomy (you choose), competence (you show up prepared), and relatedness (connection feels real).",
+      "howItShowsUp": [
+        "You can network, but you don’t need it every day",
+        "You like a balanced week: people + quiet",
+        "You can lead and also listen"
+      ],
+      "watchOutFor": [
+        "Overbooking because you forget recovery",
+        "Staying neutral when you should take a clear stance",
+        "Letting others set the social pace for you"
+      ],
+      "growthSuggestion": [
+        "Choose one ‘high-social’ day and one ‘low-social’ day per week",
+        "Practice saying what you want directly in one sentence"
+      ],
+      "examples": [
+        "You enjoy team sessions, but you need solo time to do your best work."
+      ],
+      "microActions": [
+        "Before a social commitment, ask: “Will this energize me or drain me?” and decide accordingly.",
+        "Add a 15-minute decompression ritual after intense interactions."
+      ]
+    },
+    "high": {
+      "title": "Extraversion — High",
+      "shortSummary": "You gain energy from engagement, movement, and active interaction.",
+      "longDescription": "High Extraversion often means activation: you think faster in motion, you feel alive through interaction, and you recover by doing. In work, it can look like leadership, influence, and momentum. Under stress, it can turn into impatience, impulsive speaking, or seeking stimulation when what you need is regulation. A strengths-based approach is channeling: aim your energy with priorities and recovery structure. SDT-wise, you thrive when you have autonomy (choice of direction), competence (clear progress), and relatedness (healthy feedback loops).",
+      "howItShowsUp": [
+        "You process by talking and engaging",
+        "You create momentum quickly",
+        "You energize others through presence"
+      ],
+      "watchOutFor": [
+        "Interrupting yourself and others under pressure",
+        "Overcommitting to keep the buzz going",
+        "Avoiding stillness when you actually need it"
+      ],
+      "growthSuggestion": [
+        "Use brief pauses to improve precision",
+        "Add recovery structure so energy stays sustainable"
+      ],
+      "examples": [
+        "You leave a meeting more energized than you entered.",
+        "You speak your way into clarity, then refine."
+      ],
+      "microActions": [
+        "Use a 10-second pause before replying when emotional.",
+        "Choose one ‘no’ per day to prevent overbooking."
+      ]
+    }
+  },
+  "openness": { "low": {}, "mid": {}, "high": {} },
+  "conscientiousness": { "low": {}, "mid": {}, "high": {} },
+  "agreeableness": { "low": {}, "mid": {}, "high": {} },
+  "emotional_stability": { "low": {}, "mid": {}, "high": {} }
+}
