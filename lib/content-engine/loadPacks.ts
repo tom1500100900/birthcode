@@ -16,7 +16,7 @@ import { PL_MATCH_BREAKDOWN_LABELS, PL_MATCH_REASON_TEMPLATES } from '@/lib/cont
 import { PL_PRACTICES } from '@/lib/content-packs/pl/practices/practices';
 import type { SupportedLang } from '@/lib/content-engine/contracts';
 
-type SectionId = 'birthcode' | 'potential' | 'mind' | 'emotions' | 'action' | 'decisions' | 'genius' | 'stress' | 'relations';
+type SectionId = 'hook' | 'who_you_are' | 'tension' | 'how_you_work' | 'stress' | 'relations';
 
 type LoadedPacks = {
   lang: SupportedLang;
