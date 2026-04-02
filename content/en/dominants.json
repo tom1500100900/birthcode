@@ -1,0 +1,116 @@
+{
+  "element": {
+    "fire": {
+      "title": "Fire",
+      "shortSummary": "Drive, initiative, and bold action — energy that wants movement and impact.",
+      "longDescription": "Fire dominance often shows up as momentum: you feel energized by challenge, urgency, and visible movement. In Big Five terms, it can resemble higher Extraversion (activation, assertiveness) or higher Openness (risk, exploration), but Fire is mainly about ignition — getting things moving. At its best, Fire brings courage, leadership, and fast recovery after setbacks. Under stress, it can flip into impatience, reactivity, or an all-or-nothing push that leads to burnout. A strengths-based approach is to treat Fire as a renewable resource: aim it with clear priorities, build recovery into the plan, and keep commitments small enough to sustain. In SDT terms, Fire thrives when autonomy (choice) and competence (real progress) are supported.",
+      "howItShowsUp": [
+        "You get energized by deadlines, goals, and competition",
+        "You prefer action over endless deliberation",
+        "You influence others through confidence and momentum"
+      ],
+      "watchOutFor": [
+        "Overcommitting and then crashing",
+        "Forcing outcomes when patience is required",
+        "Turning frustration into conflict instead of direction"
+      ],
+      "microActions": [
+        "Pick one priority for the next 7 days and say no to one extra task.",
+        "Use a 2-minute pause before responding when irritated.",
+        "Schedule recovery like a task (sleep, movement, quiet)."
+      ]
+    },
+    "earth": {
+      "title": "Earth",
+      "shortSummary": "Stability, practicality, and results — energy that wants reliable progress.",
+      "longDescription": "Earth dominance tends to be steady and pragmatic. You may value what works, what lasts, and what can be tested in practice. It often overlaps with higher Conscientiousness: planning, consistency, and responsibility. At its best, Earth creates trust because you build outcomes that hold up over time. Under stress, Earth can become rigid, overly cautious, or stuck in practicality that avoids change and emotional reality. A strengths-based approach is flexible structure: keep the standards, update the plan when new information arrives. In SDT terms, Earth thrives on competence (clear progress) and autonomy (owning your standards rather than pleasing others).",
+      "howItShowsUp": [
+        "You like clear plans and step-by-step progress",
+        "You manage risk carefully and value reliability",
+        "You build systems that keep things functioning"
+      ],
+      "watchOutFor": [
+        "Over-controlling to avoid uncertainty",
+        "Delaying decisions until you feel 100% sure",
+        "Confusing safety with stagnation"
+      ],
+      "microActions": [
+        "Define “good enough” before you start a task.",
+        "Set a 15-minute decision window for one pending choice.",
+        "Add one small experiment per week to keep flexibility."
+      ]
+    },
+    "air": {
+      "title": "Air",
+      "shortSummary": "Ideas, clarity, and perspective — energy that wants understanding and communication.",
+      "longDescription": "Air dominance emphasizes thinking, language, and making sense of experience. You may process life by naming it: analyzing, comparing, explaining. At its best, Air brings objectivity, strategy, and strong communication. Under stress, it can turn into overthinking, detachment, or using logic to avoid feeling. A strengths-based approach is integration: let thinking serve action and connection, rather than replacing them. In SDT terms, Air thrives when relatedness is safe (you can speak honestly) and competence is real (ideas translate into outcomes).",
+      "howItShowsUp": [
+        "You clarify problems by talking or writing them out",
+        "You value insight, truth, and fairness",
+        "You connect through shared ideas and humor"
+      ],
+      "watchOutFor": [
+        "Analysis paralysis",
+        "Explaining instead of experiencing",
+        "Detaching when emotions get intense"
+      ],
+      "microActions": [
+        "After thinking, ask: “What is one next action?”",
+        "Use a 3-sentence limit when you feel the urge to overexplain.",
+        "Pair a conversation with a feeling-check: name one emotion first."
+      ]
+    },
+    "water": {
+      "title": "Water",
+      "shortSummary": "Sensitivity, intuition, and depth — energy that wants emotional truth and safe connection.",
+      "longDescription": "Water dominance emphasizes emotional perception: you notice tone, meaning, and what’s unspoken. At its best, Water brings empathy, loyalty, and strong intuition about people. Under stress, it can become overwhelmed, avoidant, or stuck in emotional loops. A strengths-based approach is boundaries: sensitivity works best with structure and clear communication. In SDT terms, Water thrives when relatedness is safe (trust) and autonomy is respected (no emotional coercion).",
+      "howItShowsUp": [
+        "You pick up mood shifts and relational dynamics quickly",
+        "You value emotional honesty and loyalty",
+        "You recover through quiet, meaningful connection"
+      ],
+      "watchOutFor": [
+        "Absorbing other people’s emotions as your responsibility",
+        "Avoiding direct communication to keep peace",
+        "Rumination and emotional looping"
+      ],
+      "microActions": [
+        "Name what’s yours vs what’s theirs (one sentence each).",
+        "Use one boundary phrase: “I can’t do that, but I can do this.”",
+        "Choose one recovery ritual: walk, shower, music, journaling."
+      ]
+    }
+  },
+  "modality": {
+    "cardinal": {
+      "title": "Cardinal",
+      "shortSummary": "Initiation — you start things, create momentum, and lead change.",
+      "longDescription": "Cardinal dominance is about starting: you initiate, make the first move, and create direction. The growth edge is finishing well — sustaining progress after the excitement of the start. A helpful CBT-lite lens is to notice what triggers you to start too many things (anxiety, novelty, impatience), then choose a response that protects follow-through.",
+      "microActions": [
+        "Limit active goals to 1–2 at a time.",
+        "Define a finish line before you begin.",
+        "Schedule a mid-point review to prevent drift."
+      ]
+    },
+    "fixed": {
+      "title": "Fixed",
+      "shortSummary": "Stabilization — you sustain, deepen, and protect what matters.",
+      "longDescription": "Fixed dominance is about staying power: you hold course, deepen skill, and build long-term stability. The gift is resilience and loyalty; the risk is rigidity when change is necessary. Strengths-based growth is adaptive stability: keep the values, update the strategy.",
+      "microActions": [
+        "Ask: “What must stay the same, and what can change?”",
+        "Make one small adjustment instead of resisting the entire shift.",
+        "Lead with curiosity before you defend."
+      ]
+    },
+    "mutable": {
+      "title": "Mutable",
+      "shortSummary": "Adaptation — you adjust quickly, learn fast, and pivot when needed.",
+      "longDescription": "Mutable dominance is about flexibility: you respond to new information, reframe quickly, and adapt. The gift is learning and agility; the risk is scattering or losing your direction. SDT-wise, the key is autonomy: choose your pivots rather than being pulled by other people’s needs.",
+      "microActions": [
+        "Choose one anchor habit that stays constant each week.",
+        "Before you pivot, ask: “Is this my choice or my anxiety?”",
+        "Define one non-negotiable boundary for your time."
+      ]
+    }
+  }
+}

@@ -45,4 +45,4 @@ app-example
 .env
 .codex_tmp/
 content-import/
-
+supabase/.temp/

@@ -1,0 +1,20 @@
+[functions.astro-engine-v1]
+verify_jwt = false
+
+[functions.astro-engine-v2]
+enabled = true
+verify_jwt = false
+import_map = "./functions/astro-engine-v2/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/astro-engine-v2/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/astro-engine-v2/*.html" ]
+
+[functions.astro-engine-v3]
+enabled = true
+verify_jwt = false
+import_map = "./functions/astro-engine-v3/deno.json"
+entrypoint = "./functions/astro-engine-v3/index.ts"
+static_files = [ "./functions/astro-engine-v3/swiss-eph-local/lib/wasi/swiss_eph.wasm" ]

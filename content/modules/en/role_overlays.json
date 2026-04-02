@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "type": "role_overlays",
+  "roles": {
+    "sun": {
+      "id": "role.sun",
+      "label": "Sun",
+      "purpose": "Identity, direction, and what feels meaningful to build over time.",
+      "rules": {
+        "emphasizeSegments": ["core_motive", "strength_expression", "work_pattern"],
+        "deemphasizeSegments": ["relationship_pattern"],
+        "tone": "agentic"
+      },
+      "templates": {
+        "opening": [
+          "Your Sun describes the part of you that wants direction: the values you stand for, the kind of progress that feels meaningful, and the identity you grow into through choice and effort.",
+          "When this layer is resourced, you tend to act with clarity and self-respect. When it is chronically blocked, people often drift into approval-seeking, overworking for recognition, or choosing roles that look right but quietly drain them."
+        ],
+        "anchors": [
+          "Think of the Sun as your long-range compass: it points to what you want to build when you are not simply reacting to the day.",
+          "It is less about “who you should be” and more about what kind of direction makes you feel internally aligned."
+        ],
+        "integrationCue": [
+          "A strong Sun path does not remove difficulty. It makes difficulty feel worth it because the effort serves something you can respect."
+        ]
+      }
+    },
+    "moon": {
+      "id": "role.moon",
+      "label": "Moon",
+      "purpose": "Emotional needs, regulation patterns, and how you return to baseline after stress.",
+      "rules": {
+        "emphasizeSegments": ["needs_language", "cbt_loop_bias", "relationship_pattern", "shadow_expression"],
+        "tone": "regulation"
+      },
+      "templates": {
+        "opening": [
+          "Your Moon describes emotional needs and regulation: what steadies you, what you do automatically under pressure, and what restores you when life gets loud.",
+          "This is not a mood label. It is a practical nervous-system lens: when you know your Moon pattern, you can notice stress earlier and create choice instead of running on autopilot."
+        ],
+        "anchors": [
+          "Under strain, many people default to a familiar loop (escalate, withdraw, overexplain, control). The Moon helps you name your loop without judging it.",
+          "Regulation is not suppression. It is the ability to stay connected to yourself while responding wisely."
+        ],
+        "integrationCue": [
+          "When your Moon needs are ignored for too long, even strong strengths begin to fray. Supporting this layer protects everything else."
+        ]
+      }
+    },
+    "asc": {
+      "id": "role.asc",
+      "label": "Ascendant",
+      "purpose": "First-contact style: how you enter situations, start interactions, and how others initially read you.",
+      "rules": {
+        "emphasizeSegments": ["strength_expression", "relationship_pattern"],
+        "tone": "entry"
+      },
+      "templates": {
+        "opening": [
+          "Your Ascendant describes your default starting strategy: how you enter new situations before you have time to overthink, and what kind of first impression your presence tends to create.",
+          "It is not a fake mask. It is a functional pattern shaped by temperament and experience — the way you begin when you’re not consciously editing yourself."
+        ],
+        "anchors": [
+          "The Ascendant is most visible at transitions: new rooms, new people, new roles, new pressure.",
+          "Growth here is flexibility: choosing your entry style intentionally rather than running it on autopilot."
+        ],
+        "integrationCue": [
+          "When your Ascendant is aligned with your Sun direction and Moon needs, you feel coherent. When it isn’t, you may feel misunderstood or performative without knowing why."
+        ]
+      }
+    }
+  }
+}

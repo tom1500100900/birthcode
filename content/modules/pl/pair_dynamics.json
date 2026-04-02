@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "type": "pair_dynamics",
+  "templates": [
+    {
+      "id": "element.synergy",
+      "selector": {
+        "compatibility": "synergy"
+      },
+      "text": [
+        "Między tymi warstwami horoskopu istnieje naturalna spójność. Sposób, w jaki dążysz do celów, oraz sposób regulacji emocji wzajemnie się wspierają.",
+        "Ta wewnętrzna koherencja sprzyja stabilności i klarowności pod presją."
+      ]
+    },
+    {
+      "id": "element.tension",
+      "selector": {
+        "compatibility": "tension"
+      },
+      "text": [
+        "Między częściami Twojej struktury istnieje napięcie rozwojowe. Jedna warstwa może pchać do działania, podczas gdy inna potrzebuje bezpieczeństwa lub refleksji.",
+        "To tarcie bywa wymagające, ale jednocześnie buduje głębię i odporność, gdy uczysz się negocjować zamiast nadpisywać jedną część drugą."
+      ]
+    },
+    {
+      "id": "modality.harmony",
+      "selector": {
+        "modalityRelation": "harmony"
+      },
+      "text": [
+        "Twoje wewnętrzne tempo jest względnie spójne. Sposób inicjowania, stabilizowania lub dostosowywania się ma podobny rytm w różnych warstwach.",
+        "To wspiera przewidywalność i jasność decyzji."
+      ]
+    },
+    {
+      "id": "modality.clash",
+      "selector": {
+        "modalityRelation": "clash"
+      },
+      "text": [
+        "Różne części Ciebie działają w odmiennym tempie. Jedna warstwa chce szybko zaczynać, inna potrzebuje utrwalenia lub elastyczności.",
+        "Rozwojem staje się tu sekwencjonowanie działań zamiast wymuszania jednoczesnej zgodności."
+      ]
+    }
+  ],
+  "integration_closers": [
+    "Kluczem jest integracja, a nie eliminacja którejś warstwy — każda ma sw?ją funkcję.",
+    "Gdy te części współpracują zamiast rywalizować, pojawia się większa spójność i mniejsze napięcie wewnętrzne."
+  ]
+}

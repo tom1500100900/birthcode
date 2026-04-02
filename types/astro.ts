@@ -146,11 +146,76 @@ export interface ActItem {
 
 export interface AstroResult {
   chart: AstroChart;
+  signals?: AstroSignals;
   profile: AstroProfile;
   insights: InsightItem[];
   acts: ActItem[];
   context: ProfileContext;
   contentLocale?: 'en' | 'pl';
+}
+
+// ==========================================
+// NEW: SIGNALS LAYER & METRICS
+// ==========================================
+
+export interface AstroMetrics {
+  structure: number;  // 0-100
+  curiosity: number;  // 0-100
+  stability: number;  // 0-100
+  social: number;     // 0-100
+}
+
+export interface AstroTension {
+  id: string;
+  type: 'internal' | 'external' | 'relational';
+  elements: [string, string];
+  intensity: number; // 0-100
+}
+
+export interface AstroSignals {
+  sunSign: string;
+  moonSign: string;
+  ascSign: string;
+  degree: number;
+  archetype: string;
+  dominantEnergy: string;
+  tensions: AstroTension[];
+  metrics: AstroMetrics;
+}
+
+// ==========================================
+// NEW: RELATIONSHIP / MATCH LAYER
+// ==========================================
+
+export interface MatchScore {
+  total: number; // 0-100
+  communication: number; // 0-100
+  emotional: number;     // 0-100
+  growth: number;        // 0-100
+}
+
+export interface MatchDynamic {
+  id: string;
+  title: string;
+  mechanism: string;     // How this dynamic plays out
+  consequence: string;   // Cost/Shadow of the dynamic
+  type: 'strength' | 'challenge' | 'magnetic';
+}
+
+export interface MatchRecommendation {
+  text: string;
+  target: 'personA' | 'personB' | 'both';
+  rationale: string;
+}
+
+export interface RelationshipMatch {
+  id: string;
+  personAId: string; // The user (e.g. the girl)
+  personBId: string; // The matched person
+  score: MatchScore;
+  dynamics: MatchDynamic[];
+  recommendations: MatchRecommendation[];
+  createdAt: string;
 }
 
 export interface PersonProfile {

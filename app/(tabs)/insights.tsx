@@ -7,6 +7,7 @@ import Card from '@/components/Card';
 import CopyButton from '@/components/CopyButton';
 import SectionTitle from '@/components/SectionTitle';
 import { buildInsightCardText } from '@/lib/copy/textBuilders';
+import { toPolishInsightDisplay } from '@/lib/insights/plFallback';
 import { useLocale } from '@/lib/i18n/useLocale';
 import { ButtonPrimary } from '@/src/components';
 import { colors } from '@/src/theme/colors';
@@ -137,17 +138,24 @@ export default function InsightsScreen() {
           ) : (
             filteredInsights.map((item: InsightItem) => {
               const saved = savedInsightIds.includes(item.id);
+              const display = language === 'pl'
+                ? toPolishInsightDisplay(item, astroResult.contentLocale !== 'pl')
+                : {
+                  title: item.title,
+                  whyItMatters: item.whyItMatters,
+                  questions: item.questions,
+                };
               return (
                 <Card key={item.id}>
                   <View style={styles.cardHeader}>
                     <View style={styles.cardHeaderTextWrap}>
-                      <SectionTitle title={item.title} subtitle={t(`categories.${item.category}`)} />
+                      <SectionTitle title={display.title} subtitle={t(`categories.${item.category}`)} />
                     </View>
                     <CopyButton textToCopy={buildInsightCardText(item)} />
                   </View>
-                  <Text style={styles.text}>{item.whyItMatters}</Text>
+                  <Text style={styles.text}>{display.whyItMatters}</Text>
                   <SectionTitle title={t('insights.questions')} />
-                  {item.questions.map((question) => (
+                  {display.questions.map((question) => (
                     <Text key={question} style={styles.text}>- {question}</Text>
                   ))}
 

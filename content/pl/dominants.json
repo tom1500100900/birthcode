@@ -1,0 +1,41 @@
+{
+  "element": {
+    "fire": {
+      "title": "Ogień",
+      "shortSummary": "Napęd, inicjatywa i odważne działanie — energia, która chce ruchu i wpływu.",
+      "longDescription": "Dominanta Ognia często wygląda jak momentum. W najlepszej wersji daje odwagę i zdolność uruchamiania spraw. Pod presją może przechodzić w niecierpliwość lub wysiłek „wszystko albo nic”. Rozwój polega na kierowaniu tej energii priorytetami i ochronie regeneracji."
+    },
+    "earth": {
+      "title": "Ziemia",
+      "shortSummary": "Stabilność, praktyczność i niezawodny postęp.",
+      "longDescription": "Dominanta Ziemi ceni to, co działa, co jest trwałe i co można sprawdzić w praktyce. W najlepszej wersji buduje zaufanie dzięki konsekwencji. Pod presją może stawać się sztywna lub nadmiernie ostrożna. Rozwój to elastyczna struktura: standardy zostają, metoda się aktualizuje."
+    },
+    "air": {
+      "title": "Powietrze",
+      "shortSummary": "Idee, klarowność i perspektywa — energia, która chce rozumieć i komunikować.",
+      "longDescription": "Dominanta Powietrza wzmacnia myślenie i język. W najlepszej wersji daje strategię i komunikację. Pod presją może wchodzić w nadmyślenie albo dystans. Rozwój to integracja: myślenie ma służyć działaniu i relacji."
+    },
+    "water": {
+      "title": "Woda",
+      "shortSummary": "Wrażliwość, intuicja i emocjonalna głębia.",
+      "longDescription": "Dominanta Wody wzmacnia emocjonalną percepcję i więź. W najlepszej wersji daje empatię i lojalność. Pod presją może się przeciążać albo utknąć w pętlach. Rozwój to granice: wrażliwość najlepiej działa ze strukturą i jasną komunikacją."
+    }
+  },
+  "modality": {
+    "cardinal": {
+      "title": "Kardynalna",
+      "shortSummary": "Inicjowanie — zaczynasz i uruchamiasz zmianę.",
+      "longDescription": "Dominanta kardynalna świeci na starcie: robisz pierwszy ruch i ustawiasz kierunek. Krawędź rozwoju to domykanie: mniej startów, lepsze finisze."
+    },
+    "fixed": {
+      "title": "Stała",
+      "shortSummary": "Stabilizowanie — utrzymujesz i pogłębiasz to, co ważne.",
+      "longDescription": "Dominanta stała daje wytrwałość i lojalność. Krawędź rozwoju to adaptacyjna stabilność: wartości zostają, strategia się aktualizuje."
+    },
+    "mutable": {
+      "title": "Zmienna",
+      "shortSummary": "Adaptacja — szybko się dostosowujesz i uczysz.",
+      "longDescription": "Dominanta zmienna daje elastyczność i szybkie uczenie. Krawędź rozwoju to kierunek: pivot ma być wyborem, nie ciągłym byciem ciągniętym przez wszystko dookoła."
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "type": "degree_modifiers",
+  "bands": {
+    "early": {
+      "range": [0, 9],
+      "description": "Surowa i bezpośrednia ekspresja energii znaku.",
+      "byRole": {
+        "sun": [
+          "Słońce w wczesnych stopniach zwykle wyraża energię znaku szybko i instynktownie, zanim zostanie ona ukształtowana przez doświadczenie.",
+          "Jest tu dynamika i klarowność, ale rozwój polega bardziej na integracji niż na przyspieszaniu."
+        ],
+        "moon": [
+          "Księżyc w wczesnych stopniach może reagować emocjonalnie bardzo szybko.",
+          "Siła rośnie, gdy uczysz się wydłużać przestrzeń między bodźcem a reakcją."
+        ],
+        "asc": [
+          "Ascendent w wczesnych stopniach często tworzy wyraźne i natychmiastowe pierwsze wrażenie.",
+          "Twój styl wejścia bywa bezpośredni i zauważalny."
+        ]
+      }
+    },
+    "mid": {
+      "range": [10, 19],
+      "description": "Zrównoważona i bardziej zintegrowana ekspresja energii znaku.",
+      "byRole": {
+        "sun": [
+          "Słońce w środkowych stopniach zwykle wyraża znak w sposób stabilny i bardziej świadomy.",
+          "Łatwiej tu o równowagę między impulsem a decyzją."
+        ],
+        "moon": [
+          "Księżyc w środkowych stopniach często daje większą przestrzeń na nazwanie emocji zanim przejmą kontrolę.",
+          "Regulacja bywa bardziej elastyczna."
+        ],
+        "asc": [
+          "Ascendent w środkowych stopniach sprawia wrażenie spójnego i czytelnego.",
+          "Inni szybciej rozumieją Twój styl działania."
+        ]
+      }
+    },
+    "late": {
+      "range": [20, 29],
+      "description": "Dojrzała lub wzmocniona ekspresja energii znaku.",
+      "byRole": {
+        "sun": [
+          "Słońce w późnych stopniach może przejawiać się jako zintegrowana dojrzałość albo zmęczenie powtarzanym wzorcem.",
+          "Rozwój polega tu częściej na odświeżeniu kierunku niż na zwiększaniu presji."
+        ],
+        "moon": [
+          "Księżyc w późnych stopniach niesie głębię i pamięć emocjonalną.",
+          "Jasne granice pomagają uniknąć przeciążenia."
+        ],
+        "asc": [
+          "Ascendent w późnych stopniach bywa odbierany jako opanowany i świadomy.",
+          "Styl wejścia może być bardziej strategiczny niż spontaniczny."
+        ]
+      }
+    }
+  }
+}

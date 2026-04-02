@@ -1,0 +1,84 @@
+{
+  "decans": {
+    "1": {
+      "byRole": {
+        "sun": [
+          "Pierwszy dekan Slonca czesto uruchamia szybki start i nadaje kierunek przez dzialanie."
+        ],
+        "moon": [
+          "Pierwszy dekan Ksiezyca reaguje szybko; wczesne nazwanie emocji poprawia regulacje."
+        ],
+        "asc": [
+          "Pierwszy dekan Ascendentu bywa odbierany jako bezposredni i natychmiastowy."
+        ]
+      }
+    },
+    "2": {
+      "byRole": {
+        "sun": [
+          "Drugi dekan Slonca wzmacnia konsekwencje i dopracowanie kierunku."
+        ],
+        "moon": [
+          "Drugi dekan Ksiezyca stabilizuje potrzeby przez rytm i powtarzalnosc."
+        ],
+        "asc": [
+          "Drugi dekan Ascendentu sygnalizuje spokojne tempo i praktyczna pewnosc."
+        ]
+      }
+    },
+    "3": {
+      "byRole": {
+        "sun": [
+          "Trzeci dekan Slonca sprzyja laczeniu kilku priorytetow i szybkim korektom."
+        ],
+        "moon": [
+          "Trzeci dekan Ksiezyca korzysta z elastycznosci przy jednoczesnym domykaniu petli."
+        ],
+        "asc": [
+          "Trzeci dekan Ascendentu bywa odbierany jako adaptacyjny i responsywny."
+        ]
+      }
+    }
+  },
+  "segments": {
+    "early": {
+      "byRole": {
+        "sun": [
+          "Faza wczesna wzmacnia start: najpierw ustal priorytet, potem rozszerzaj zakres."
+        ],
+        "moon": [
+          "Faza wczesna Ksiezyca wspiera szybkie rozpoznanie sygnalow napi?cia."
+        ],
+        "asc": [
+          "Faza wczesna Ascendentu daje mocny pierwszy sygnal; tempo buduje zaufanie."
+        ]
+      }
+    },
+    "mid": {
+      "byRole": {
+        "sun": [
+          "Faza srodkowa wspiera stabilna realizacje i sp?jno?? kierunku."
+        ],
+        "moon": [
+          "Faza srodkowa Ksiezyca wzmacnia regulacje przez nazwanie i strukture."
+        ],
+        "asc": [
+          "Faza srodkowa Ascendentu bywa odbierana jako zrownowazona i konkretna."
+        ]
+      }
+    },
+    "late": {
+      "byRole": {
+        "sun": [
+          "Faza pozna sprzyja syntezie: upraszczaj wybory, by unikac rozproszenia."
+        ],
+        "moon": [
+          "Faza pozna Ksiezyca korzysta z rytualow domykania i regeneracji."
+        ],
+        "asc": [
+          "Faza pozna Ascendentu wzmacnia adaptacje; granice utrzymuja czytelnosc."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "screen": {
+    "title": "Definitions",
+    "subtitle": "A clear guide to the terms used in Birthcode."
+  },
+  "intro": {
+    "title": "How to read this",
+    "body": "Use these definitions as a legend for the map. They help you read the profile without technical noise. The goal is reflection and better decisions — not prediction. If a term feels technical, treat it as a label for a pattern, not a verdict about who you are."
+  },
+  "what_is_birthcode": {
+    "title": "What is Birthcode?",
+    "body": "Birthcode translates chart patterns into practical self-reflection: language for needs, stress responses, and strengths — plus small practices you can use in daily life."
+  },
+  "big_three": {
+    "title": "Big Three",
+    "body": "The Big Three is a practical starting layer: Sun (identity and direction), Moon (emotional needs and regulation), and Ascendant (first-contact style — how you enter new situations).",
+    "sun": "Sun: identity, direction, and what feels meaningful to build.",
+    "moon": "Moon: emotional needs, regulation patterns, and recovery.",
+    "ascendant": "Ascendant: first impression and your default way of starting."
+  },
+  "degrees": {
+    "title": "Degrees",
+    "body": "Each sign spans 0°–29°. Degrees show where a placement sits inside the sign. We simplify this as Early (0–9°), Mid (10–19°), or Late (20–29°). It refines interpretation, but it’s not required for the core profile."
+  },
+  "planets": {
+    "title": "Planets",
+    "body": "Planets represent psychological functions: drive, bonding, communication, focus, ambition. A planet’s sign shows the style of that function."
+  },
+  "aspects": {
+    "title": "Aspects",
+    "body": "Aspects describe how two functions interact. Some feel supportive and smooth; others create tension. Tension isn’t bad — it often points to a growth edge."
+  },
+  "orb": {
+    "title": "Orb",
+    "body": "Orb is how close an aspect is to exact. Smaller orb usually feels stronger. We use it to prioritize what is most noticeable."
+  },
+  "dominants": {
+    "title": "Dominants",
+    "body": "Dominants summarize overall tone. Element describes energy style; modality describes how you move through change. This is a quick map — not a fixed label."
+  },
+  "elements_modalities": {
+    "title": "Elements and Modalities",
+    "body": "Elements describe your energy style (Fire/Earth/Air/Water). Modalities describe how you act on change (Cardinal/Fixed/Mutable)."
+  },
+  "insights": {
+    "title": "Insights",
+    "body": "Insights are reflection prompts based on stable patterns. They help you name triggers, needs, and choices without pathologizing."
+  },
+  "practices": {
+    "title": "Practices",
+    "body": "Practices are small, repeatable exercises. They translate your profile into behavior: clarity, regulation, and relationships."
+  },
+  "saved": {
+    "title": "Saved",
+    "body": "Save insights and practices so you can return to them quickly."
+  },
+  "disclaimer": {
+    "title": "Note",
+    "body": "This content is reflective and educational, not medical or psychological advice."
+  }
+}

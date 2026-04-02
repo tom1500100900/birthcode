@@ -1,0 +1,41 @@
+{
+  "contentVersion": "1.0.0",
+  "variables": {
+    "big5": {
+      "scoreRange": {
+        "min": 0,
+        "max": 100
+      },
+      "buckets": {
+        "low": {
+          "min": 0,
+          "max": 33
+        },
+        "mid": {
+          "min": 34,
+          "max": 66
+        },
+        "high": {
+          "min": 67,
+          "max": 100
+        }
+      }
+    },
+    "sdtNeed": [
+      "autonomy",
+      "competence",
+      "relatedness"
+    ],
+    "dominantElement": [
+      "Fire",
+      "Earth",
+      "Air",
+      "Water"
+    ],
+    "dominantModality": [
+      "Cardinal",
+      "Fixed",
+      "Mutable"
+    ]
+  }
+}

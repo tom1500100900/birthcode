@@ -1,0 +1,28 @@
+{
+  "library": [
+    {
+      "id": "insight_regulation_loop",
+      "title": "Twoja pętla regulacji",
+      "shortSummary": "Zobacz schemat: wyzwalacz → automat → koszt, a potem wybierz jeden lepszy ruch.",
+      "longDescription": "Gdy rośnie stres, wiele osób nie wybiera reakcji — wchodzi w nawykowy automat. Ten wgląd pomaga narysować Tw?ją pętlę w podejściu CBT-lite: wyzwalacz → automatyczna reakcja → koszt → alternatywna odpowiedź → ruch regeneracyjny. Celem nie jest ocenianie reakcji, tylko zauważenie jej na tyle wcześnie, by ją przerwać.",
+      "questions": [
+        "Jaki jest mój najczęstszy wyzwalacz?",
+        "Jaki automat uruchamia się u mnie pod presją?",
+        "Jaki jest realny koszt tego automatu — dla mnie i dla innych?"
+      ],
+      "experiment": "Przy następnym wyzwalaczu zatrzymaj się na 10 sekund i wybierz jedną alternatywną odpowiedź. Potem zrób jeden 2-minutowy ruch regeneracyjny."
+    },
+    {
+      "id": "insight_sdt_needs_check",
+      "title": "Check potrzeb: autonomia, kompetencja, relacyjność",
+      "shortSummary": "Stres często rośnie, gdy jedna kluczowa potrzeba jest długo niezaspokojona.",
+      "longDescription": "Teoria Autodeterminacji (SDT) mówi o trzech potrzebach: autonomia (wybór), kompetencja (skuteczny postęp) i relacyjność (bezpieczny kontakt). Gdy jedna z nich jest chronicznie „niedokarmiona”, często kompensujemy w sposób, który tworzy kolejne problemy. Ten wgląd pomaga nazwać brakującą potrzebę i wesprzeć ją małym, praktycznym ruchem.",
+      "questions": [
+        "Która potrzeba jest dziś najbardziej niedożywiona: autonomia, kompetencja czy relacyjność?",
+        "Jak kompensuję — i jaki jest ukryty koszt?",
+        "Jaka jedna mała akcja może wesprzeć tę potrzebę dzisiaj?"
+      ],
+      "experiment": "Wybierz jeden mikro-krok (10–20 minut), który karmi brakującą potrzebę i da się go powtórzyć."
+    }
+  ]
+}

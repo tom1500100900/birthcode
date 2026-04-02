@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "type": "pair_dynamics",
+  "templates": [
+    {
+      "id": "element.synergy",
+      "selector": {
+        "compatibility": "synergy"
+      },
+      "text": [
+        "There is a natural coherence between these layers of your chart. The way you move toward goals and the way you regulate emotionally tend to support one another.",
+        "This internal alignment often creates decisiveness and steadiness under pressure."
+      ]
+    },
+    {
+      "id": "element.tension",
+      "selector": {
+        "compatibility": "tension"
+      },
+      "text": [
+        "There is productive tension between parts of you. One layer may push forward while another seeks safety or reflection.",
+        "This can feel like inner friction, but it also builds depth and resilience when you learn to negotiate rather than override."
+      ]
+    },
+    {
+      "id": "modality.harmony",
+      "selector": {
+        "modalityRelation": "harmony"
+      },
+      "text": [
+        "Your internal tempo is relatively consistent. The way you initiate, stabilize, or adapt follows a similar rhythm across layers.",
+        "This supports predictability and clarity in your decisions."
+      ]
+    },
+    {
+      "id": "modality.clash",
+      "selector": {
+        "modalityRelation": "clash"
+      },
+      "text": [
+        "Different parts of you operate at different speeds. One layer may want to initiate quickly, while another prefers consolidation or flexibility.",
+        "Learning to sequence rather than force alignment becomes a key developmental skill."
+      ]
+    }
+  ],
+  "integration_closers": [
+    "The growth path here is integration rather than elimination — allowing each layer its function without letting one dominate unconsciously.",
+    "When these layers communicate instead of compete, you experience greater coherence and less internal strain."
+  ]
+}

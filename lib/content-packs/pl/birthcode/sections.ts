@@ -36,7 +36,8 @@ export const sections = {
     id: "bc_stress",
     title: "Twój tryb stresu",
     blocks: [
-      { id: "bc_stress_01", text: "Pod presją Twój system psychologiczny przełącza się w tryb ochronny. Możesz wtedy próbować kontrolować więcej rzeczy naraz albo wycofywać się, aby odzyskać poczucie stabilności." }
+      { id: "bc_stress_01", text: "Pod presją Twój system psychologiczny przełącza się w domyślną strategię przetrwania wyznaczaną przez Twoje najsilniejsze napięcie. Zazwyczaj jest to próba odzyskania równowagi kosztem ignorowania jednej strony tego napięcia." },
+      { id: "bc_stress_02", text: "Zrozumienie, którą metrykę poświęcasz w stresie, pozwala Ci świadomie zresetować swój system nerwowy, zanim wejdziesz w tryb reaktywny." }
     ]
   },
 
@@ -44,7 +45,48 @@ export const sections = {
     id: "bc_relations",
     title: "Relacje i wpływ ludzi",
     blocks: [
-      { id: "bc_relations_01", text: "Ludzie mają na Ciebie większy wpływ niż może się wydawać. W odpowiednim środowisku potrafisz rozkwitać bardzo szybko, ale w napiętej atmosferze Twoja energia spada." }
+      { id: "bc_relations_01", text: "W relacjach międzyludzkich Twój mechanizm psychologiczny zderza się z energiami innych. To, co u Ciebie jest naturalnym dążeniem (np. do kontroli lub autonomii), dla innych może stanowić źródło fascynacji lub tarcia." },
+      { id: "bc_relations_02", text: "Najlepsze relacje budujesz nie wtedy, gdy rezygnujesz ze swojego głównego napięcia, ale wtedy, gdy świadomie komunikujesz swoje potrzeby i potrafisz wyważyć swoje naturalne skłonności." }
     ]
   }
 }
+
+type SectionKey = 'birthcode' | 'potential' | 'mind' | 'emotions' | 'action' | 'decisions' | 'genius' | 'stress' | 'relations';
+
+const FALLBACK_TEXT = 'Tresc w przygotowaniu.';
+
+export const PL_BIRTHCODE_SECTION_ORDER: SectionKey[] = [
+  'birthcode',
+  'potential',
+  'mind',
+  'emotions',
+  'action',
+  'decisions',
+  'genius',
+  'stress',
+  'relations',
+];
+
+export const PL_BIRTHCODE_SECTION_TITLES: Record<SectionKey, string> = {
+  birthcode: sections.birthcode?.title ?? 'Twój Birthcode',
+  potential: sections.potential?.title ?? 'Twój glowny potencjal',
+  mind: sections.mind?.title ?? 'Jak dziala Twój umysl',
+  emotions: sections.emotions?.title ?? 'Twój system emocjonalny',
+  action: 'Twój styl dzialania',
+  decisions: 'Jak podejmujesz decyzje',
+  genius: 'Twój tryb geniuszu',
+  stress: sections.stress?.title ?? 'Twój tryb stresu',
+  relations: sections.relations?.title ?? 'Relacje i wplyw ludzi',
+};
+
+export const PL_BIRTHCODE_SECTION_TEMPLATES: Record<SectionKey, string[]> = {
+  birthcode: (sections.birthcode?.blocks ?? []).map((block) => block.text),
+  potential: (sections.potential?.blocks ?? []).map((block) => block.text),
+  mind: (sections.mind?.blocks ?? []).map((block) => block.text),
+  emotions: (sections.emotions?.blocks ?? []).map((block) => block.text),
+  action: [FALLBACK_TEXT],
+  decisions: [FALLBACK_TEXT],
+  genius: [FALLBACK_TEXT],
+  stress: (sections.stress?.blocks ?? []).map((block) => block.text),
+  relations: (sections.relations?.blocks ?? []).map((block) => block.text),
+};

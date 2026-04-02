@@ -1,88 +1,122 @@
 {
   "profile": {
-    "narrative": "Ten profil jest narracyjna mapa wzorcow zachowania. Laczy symboliczna strukture wykresu z nowoczesnym jezykiem psychologii, aby pomagac w rozumieniu decyzji, regulacji stresu i relacji.",
+    "narrative": "Ten profil jest refleksyjna mapa Twoich wzorcow zachowania. Laczy symboliczna strukture wykresu z nowoczesnym jezykiem psychologii, aby pomagac zauwazac sposob podejmowania decyzji, regulacji stresu i budowania relacji.",
     "strengths": [
-      "Potrafisz zamieniac autorefleksje na konkretne decyzje.",
-      "Najszybciej budujesz tempo, gdy kierunek jest jasny.",
-      "Utrwalasz rozwoj poprzez powtarzalne rytmy dzialania."
+      "Potrafisz zamieniac autorefleksje na praktyczne decyzje.",
+      "Budujesz tempo, gdy kierunek jest jasny.",
+      "Utrzymujesz rozwoj przez powtarzalne rytmy dzialania."
     ],
     "risks": [
-      "Pod presja mozesz nadmiernie kontrolowac szczegoly i tracic perspektywe.",
-      "Mozesz odkladac trudne rozmowy, by utrzymac chwilowy spokoj.",
-      "Mozesz mylic intensywnosc z pilnoscia i reagowac zbyt szybko."
+      "Pod presja możesz nadmiernie kontrolowac szczegóły i tracic perspektywe.",
+      "Możesz odkladac trudne rozmowy, by utrzymac krotkoterminowy spokoj.",
+      "Możesz mylic intensywnosc z pilnoscia i reagowac zbyt szybko."
     ],
     "recommendations": [
       "Wybierz jeden priorytet tygodnia i chroń go jasnymi granicami.",
       "Stosuj krotki rytual resetu przed waznymi odpowiedziami.",
-      "Wazne potrzeby komunikuj wprost, przynajmniej raz w tygodniu."
+      "Komunikuj jedna wazna potrzebe wprost przynajmniej raz w tygodniu."
     ]
   },
-  "screen": {
-    "title": "Profil ogólny",
-    "subtitle": "Opis cech i tendencji — jako mapa do refleksji, nie etykieta."
-  },
-  "intro": {
-    "title": "Jak czytać ten profil",
-    "body": "Ten moduł opisuje tendencje: to, co zwykle przychodzi łatwiej, co kosztuje więcej energii i co aktywuje się pod presją. Opisy są sformułowane tak, by wspierały autorefleksję i decyzje, a nie tworzyły „wyroku o osobowości”. Jeśli coś brzmi znajomo — potraktuj to jak wskazówkę do świadomego wyboru. Jeśli coś nie pasuje — to też informacja: profil jest mapą, a nie definicją."
-  },
-  "framework": {
-    "title": "Metodologia",
-    "body": "Treści są oparte o język psychologiczny, który dobrze nadaje się do samoobserwacji: Big Five (cechy), Self-Determination Theory (autonomia, kompetencja, relacyjność), CBT-lite (pętla: wyzwalacz → automat → koszt → alternatywa) oraz podejście strengths-based (mocne strony + warunki ich działania)."
-  },
-  "sections": [
-    {
-      "id": "identity_and_direction",
-      "title": "Tożsamość i kierunek",
-      "body": "Ta część mówi o tym, jak tworzysz sens i jak podejmujesz długofalowe decyzje. Dla wielu osób najważniejsze napięcie dotyczy rozjazdu między tym, co „wygląda dobrze” a tym, co realnie karmi poczucie sensu. Jeżeli często czujesz, że działasz „poprawnie”, ale bez satysfakcji, warto sprawdzić: czy Twoje cele są własne, czy przejęte. Gdy kierunek jest jasny, rośnie odporność na porównywanie się i spada podatność na działanie wyłącznie pod presją otoczenia.",
-      "reflection": [
-        "Co daje mi poczucie sensu nawet wtedy, gdy jest trudno?",
-        "Czy mój cel jest mój — czy jest próbą spełnienia oczekiwań?",
-        "Jak wyglądałby tydzień, w którym działam w zgodzie z kierunkiem?"
+  "extraversion": {
+    "low": {
+      "title": "Ekstrawersja - Niska",
+      "shortSummary": "Regenerujesz się bardziej wewnetrznie i wybierasz glebie zamiast stalej stymulacji.",
+      "longDescription": "Niska ekstrawersja zwykle oznacza selektywna energie. Czesciej wybierasz mniej kontaktow, ale o wiekszej jakosci. Nie musi to oznaczac niesmialosci - to raczej temperament, który chroni skupienie i glebie. W pracy może to dawac niezależność, obserwacje i przemyslane decyzje. Pod stresem ten styl może przechodzic w wycofanie i opozniona komunikacje. Najlepszy kierunek rozwoju to szanowanie potrzeby regeneracji i budowanie malych rytualow widocznosci oraz kontaktu.",
+      "howItShowsUp": [
+        "Wolisz spokojne srodowisko i ciaglosc uwagi",
+        "W relacjach stawiasz na jakość, nie ilość",
+        "Dajesz najlepszy wklad, gdy masz czas na przemyslenie"
+      ],
+      "watchOutFor": [
+        "Opoznianie trudnych rozmow",
+        "Oddawanie pola innym przez unikanie ekspozycji",
+        "Bycie odbieranym jako zdystansowanym mimo intencji współpracy"
+      ],
+      "growthSuggestion": [
+        "Buduj maly i regularny rytm kontaktu zamiast wymuszac intensywnosc",
+        "Trenuj krotkie i konkretne komunikaty"
+      ],
+      "examples": [
+        "Na spotkaniach najpierw sluchasz, a potem dajesz jedna trafna obserwacje.",
+        "Po intensywnym weekendzie potrzebujesz spokojnego dnia, by odzyskac rownowage."
+      ],
+      "microActions": [
+        "Stosuj zasade jednej wiadomosci: wyślij krotki update zamiast czekac na idealny moment.",
+        "Po duzym obciazeniu spolecznym zaplanuj regeneracje jak staly punkt kalendarza."
       ]
     },
-    {
-      "id": "emotional_regulation",
-      "title": "Regulacja emocji i regeneracja",
-      "body": "Regulacja nie oznacza „braku emocji”. Oznacza zdolność zauważenia reakcji na tyle wcześnie, by mieć wybór, co z nią zrobić. Każdy ma automaty: eskalację, wycofanie, kontrolowanie, nadtłumaczenie, zamrożenie. Kluczowe jest zrozumienie, jaki automat włącza się u Ciebie i jaką cenę płacisz, gdy działa bez przerwy. W praktyce najskuteczniejsze są krótkie rytuały regeneracyjne, które da się powtórzyć w realnym dniu — nie tylko w idealnych warunkach.",
-      "reflection": [
-        "Jaki jest mój najwcześniejszy sygnał stresu (ciało, myśl, impuls)?",
-        "Jaki automat uruchamia się najczęściej i co on ma „załatwić”?",
-        "Jaki mały ruch realnie obniża napięcie, a nie tylko odwraca uwagę?"
+    "mid": {
+      "title": "Ekstrawersja - Srednia",
+      "shortSummary": "Laczysz kontakt z ludzmi i czas dla siebie w elastyczny sposob.",
+      "longDescription": "Srednia ekstrawersja daje elastycznosc. Potrafisz byc aktywny spolecznie, ale cenisz tez spokoj i skupienie. Rozwojowo najwazniejsza jest intencjonalnosc: świadomie wybierac, kiedy angazowac się bardziej, a kiedy chronic energie. Gdy rytm tygodnia uwzglednia zarowno kontakt, jak i wyciszenie, latwiej utrzymac stabilna motywacje i jakość decyzji.",
+      "howItShowsUp": [
+        "Możesz sieciowac, ale nie potrzebujesz tego codziennie",
+        "Dobrze dziala tydzien laczacy ludzi i spokoj",
+        "Umiesz prowadzic i jednoczesnie sluchac"
+      ],
+      "watchOutFor": [
+        "Przeladowanie kalendarza bez czasu na regeneracje",
+        "Pozostawanie zbyt neutralnym, gdy potrzebne jest stanowisko",
+        "Oddawanie innym kontroli nad tempem kontaktu"
+      ],
+      "growthSuggestion": [
+        "Wyznacz jeden dzien bardziej spoleczny i jeden bardziej spokojny",
+        "Mow o potrzebach jednym konkretnym zdaniem"
+      ],
+      "examples": [
+        "Lubisz wspolne sesje zespolowe, ale kluczowe zadania domykasz solo."
+      ],
+      "microActions": [
+        "Przed zobowiazaniem spolecznym sprawdz: czy to mnie zasili, czy przeciazy.",
+        "Po intensywnych interakcjach dodaj 15 minut wyciszenia."
       ]
     },
-    {
-      "id": "relationships_and_boundaries",
-      "title": "Relacje i granice",
-      "body": "Relacje działają najlepiej, gdy łączą jasność z życzliwością. Dla wielu osób problemem nie jest brak empatii, tylko brak komunikacji granic: pojawiają się aluzje, ciche oczekiwania, kumulowanie, a potem wybuch lub odcięcie. Zdrowe granice nie są chłodem — są precyzją. Gdy prosisz wprost, dajesz drugiej stronie szansę odpowiedzieć. Gdy stawiasz granicę spokojnie, chronisz relację przed eskalacją. Jeśli masz tendencję do brania odpowiedzialności za emocje innych, Twoim rozwojem jest rozróżnienie: co jest moje, a co nie jest moje.",
-      "reflection": [
-        "Co robię, gdy potrzebuję czegoś ważnego — proszę wprost czy liczę na domyślność?",
-        "Jak wygląda u mnie unikanie konfliktu: cisza, zgoda, odcięcie, ironia?",
-        "Jaka jedna granica poprawiłaby jakość mojej energii w relacjach?"
-      ]
-    },
-    {
-      "id": "work_and_decisions",
-      "title": "Praca, decyzje i odpowiedzialność",
-      "body": "W obszarze pracy najczęściej pojawiają się dwie skrajności: chaos i nadkontrola. Chaos to brak priorytetów, wielozadaniowość i odkładanie decyzji. Nadkontrola to perfekcjonizm, przeciążenie i trudność w delegowaniu. W obu przypadkach wspólnym mianownikiem bywa lęk przed kosztem: przed błędem, przed oceną, przed utratą wpływu. Skuteczna zmiana zwykle zaczyna się od definicji „wystarczająco dobrze” i od ograniczenia liczby aktywnych celów. Zamiast zwiększać presję, zwiększasz klarowność.",
-      "reflection": [
-        "Gdzie u mnie widać perfekcjonizm, a gdzie odkładanie?",
-        "Co próbuję kontrolować, bo boję się kosztu błędu lub oceny?",
-        "Jaka decyzja dałaby największą ulgę, gdybym podjął ją w 15 minut?"
-      ]
-    },
-    {
-      "id": "growth_edges",
-      "title": "Krawędzie rozwoju",
-      "body": "Krawędź rozwoju to obszar, w którym Twoje mocne strony przestają działać automatycznie. To nie „słabość” — to miejsce, gdzie potrzebujesz świadomej strategii. Zwykle są to powtarzające się sytuacje: podobny typ konfliktu, podobny typ odkładania, podobny typ przeciążenia. Najlepsza praca rozwojowa to małe eksperymenty, które da się powtórzyć: jedna rozmowa, jedna granica, jeden rytuał regeneracyjny. Zmieniasz nie siebie jako osobę, tylko swój repertuar reakcji.",
-      "reflection": [
-        "W jakich sytuacjach moje „zalety” zaczynają mi przeszkadzać?",
-        "Który automat wraca mimo moich dobrych intencji?",
-        "Jaki najmniejszy eksperyment mogę wykonać w tym tygodniu?"
+    "high": {
+      "title": "Ekstrawersja - Wysoka",
+      "shortSummary": "Ladujesz energie przez dzialanie, ruch i aktywny kontakt.",
+      "longDescription": "Wysoka ekstrawersja to szybka aktywacja: mysl i energia uruchamiaja się przez kontakt i tempo. W pracy może to dawac przywodztwo, wplyw i sprawcze decyzje. Pod stresem może przechodzic w impulsywnosc i nadmiar bodzcow. Kluczem jest kanalizacja energii przez priorytety i strukture regeneracji. Wtedy zachowujesz dynamike bez przeciążenia i utraty precyzji.",
+      "howItShowsUp": [
+        "Przetwarzasz sprawy przez rozmowe i interakcje",
+        "Szybko tworzysz momentum",
+        "Naturalnie podnosisz energie zespolu"
+      ],
+      "watchOutFor": [
+        "Przerywanie sobie i innym pod presja",
+        "Nadmierne zobowiazania dla podtrzymania tempa",
+        "Unikanie ciszy, gdy potrzebna jest regulacja"
+      ],
+      "growthSuggestion": [
+        "Wprowadz krotkie pauzy, by zwiekszyc precyzje",
+        "Dbaj o rytm regeneracji, zeby energia byla stabilna"
+      ],
+      "examples": [
+        "Po spotkaniu czesto masz więcej energii niz przed nim.",
+        "Doprecyzowujesz myslenie w trakcie rozmowy."
+      ],
+      "microActions": [
+        "Przed emocjonalna odpowiedzia zrób 10-sekundowa pauze.",
+        "Codziennie wybierz jedno swiadome nie, by unikac przeciazenia."
       ]
     }
-  ],
-  "disclaimer": {
-    "title": "Uwaga",
-    "body": "Ten moduł ma charakter edukacyjny i refleksyjny. Nie zastępuje diagnozy ani terapii."
+  },
+  "openness": {
+    "low": {},
+    "mid": {},
+    "high": {}
+  },
+  "conscientiousness": {
+    "low": {},
+    "mid": {},
+    "high": {}
+  },
+  "agreeableness": {
+    "low": {},
+    "mid": {},
+    "high": {}
+  },
+  "emotional_stability": {
+    "low": {},
+    "mid": {},
+    "high": {}
   }
 }

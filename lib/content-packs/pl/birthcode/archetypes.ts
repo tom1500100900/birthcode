@@ -9,8 +9,8 @@ export const PL_ARCHETYPE_SIGNATURES: Record<ArchetypeKey, string> = {
   'Steady Builder': 'Dowozisz konsekwentnie i z duza odpornoscia.',
   'Visionary Architect': 'Laczysz wyobraznie z planem wykonawczym.',
   'Deep Strategist': 'Myslisz gleboko i ustawiasz dlugoterminowy kierunek.',
-  'Curious Integrator': 'Scalasz perspektywy, ktore dla innych sa rozlaczne.',
-  'Pragmatic Optimizer': 'Upraszczasz procesy i podnosisz jakosc decyzji.',
+  'Curious Integrator': 'Scalasz perspektywy, które dla innych sa rozlaczne.',
+  'Pragmatic Optimizer': 'Upraszczasz procesy i podnosisz jakość decyzji.',
   'Relational Harmonizer': 'Porzadkujesz relacje i odbudowujesz zaufanie.',
   'Adaptive Pioneer': 'Ruszasz szybko i dobrze korygujesz kurs.',
 };

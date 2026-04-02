@@ -1,0 +1,72 @@
+{
+  "screen": {
+    "title": "Core Profile",
+    "intro": "The Big Three describes three practical layers that tend to show up in everyday life: long-term direction and what feels meaningful to build (Sun), emotional needs and how you return to baseline after stress (Moon), and first-contact style — how you enter new situations and how others initially read you (Ascendant). Treat these as workable patterns, not fixed labels."
+  },
+  "sun": {
+    "title": "Sun — Identity & Direction",
+    "shortSummary": "Your inner compass: meaning, purpose, and the kind of contribution that energizes you when you’re aligned.",
+    "longDescription": "The Sun points to long-term direction — what you naturally want to build when you’re not simply reacting to the day. It describes how you define meaning, pride, and purpose. In Big Five language, it often shows up in how you channel Openness (values, vision) and Conscientiousness (commitment, standards) into something you genuinely respect. When this layer is supported, you act with clarity and self-respect. When it is chronically frustrated, people often drift into approval-seeking, overworking for recognition, or choosing roles that look impressive but quietly drain them. A grounded way to work with Sun patterns is simple: define success in your own words, then protect it with small, repeatable commitments. This is strengths-based work — turning what energizes you into habits, and letting go of performances that don’t serve your direction.",
+    "howItShowsUp": [
+      "The roles and projects you gravitate toward over time",
+      "What you want to be known for (even if you rarely say it out loud)",
+      "How you define success when you’re being honest with yourself",
+      "What kind of challenge makes you feel more alive — not just more busy"
+    ],
+    "watchOutFor": [
+      "Chasing approval instead of alignment",
+      "Confusing busyness with progress",
+      "Over-identifying with status or performance",
+      "Saying yes to roles that slowly reduce meaning and pride"
+    ],
+    "microActions": [
+      "Write one sentence: “Success for me this year means…”. Keep it human, not impressive.",
+      "Pick one weekly action (30–60 minutes) that supports that definition.",
+      "Name one boundary that protects it (time, attention, or people)."
+    ]
+  },
+  "moon": {
+    "title": "Moon — Needs & Emotional Regulation",
+    "shortSummary": "Your emotional operating manual: what steadies you, what you do under pressure, and what restores you.",
+    "longDescription": "The Moon describes emotional regulation — not as a mood label, but as a practical guide to your nervous system. It points to what helps you feel safe enough to think clearly, connect, and recover. Under pressure, many people default to automatic patterns: escalating, withdrawing, overexplaining, or trying to control everything. A CBT-lite way to work with Moon patterns is: identify the trigger, notice the automatic response, name the cost, choose an alternative response, then add one recovery move. This isn’t about blame; it’s skill-building. In SDT terms, regulation supports autonomy (you can choose your response), competence (you can handle pressure), and relatedness (you stay connected without escalation). When Moon needs are ignored, people often outsource regulation to conflict, avoidance, or constant busyness.",
+    "howItShowsUp": [
+      "What helps you decompress after stress (and what makes it worse)",
+      "Your relationship with closeness vs privacy",
+      "Your default stress response (fight/flight/freeze/fawn-style patterns)",
+      "How quickly you return to baseline after conflict or disappointment"
+    ],
+    "watchOutFor": [
+      "Ignoring signals until you crash or snap",
+      "Treating intensity as proof (of love, truth, or danger)",
+      "Reacting first and processing only after damage is done",
+      "Using avoidance or overwork as a substitute for regulation"
+    ],
+    "microActions": [
+      "Name your earliest stress signal (body, thought, or impulse).",
+      "Choose one 2-minute regulation move you can do anywhere (breath, short walk, grounding, cold water).",
+      "Practice one clean request: “I need X right now; can we do Y?”"
+    ]
+  },
+  "ascendant": {
+    "title": "Ascendant — First Contact & Default Start",
+    "shortSummary": "Your first impression and starting strategy: how you enter new situations and how others read you at first.",
+    "longDescription": "The Ascendant describes how you typically enter the world: how you start conversations, projects, and unfamiliar situations — especially when you don’t have time to overthink. It isn’t a fake mask; it’s a default starting strategy shaped by temperament and what has felt safe or effective in the past. Because it is a starting strategy, it can be powerful — and sometimes limiting. You might lead with competence, humor, caution, intensity, friendliness, or control. The goal is flexibility: choosing your entry style intentionally rather than running it on autopilot. In SDT terms, a healthy start supports autonomy (you choose how you show up), competence (you start in a way you can sustain), and relatedness (you signal clarity and safety to others). This layer becomes especially visible under pressure — which is why improving it is less about image and more about better first moves.",
+    "howItShowsUp": [
+      "How you introduce yourself and set the tone in new contexts",
+      "What people assume about you before they know you deeply",
+      "How you begin tasks: fast, methodical, cautious, playful, direct",
+      "What you do first under pressure: control, connect, retreat, perform, or analyze"
+    ],
+    "watchOutFor": [
+      "Getting stuck in a role that is only the “starter version” of you",
+      "Overcompensating to manage perception",
+      "Assuming others see your full story when they only see your entry style",
+      "Entering too hard or too soft for what the situation needs"
+    ],
+    "microActions": [
+      "Before a new situation, choose an intention (what you want to create), not an image (how you want to look).",
+      "Start with one clear question that creates context and connection.",
+      "Afterwards, note what felt natural vs forced — and adjust next time."
+    ]
+  }
+}

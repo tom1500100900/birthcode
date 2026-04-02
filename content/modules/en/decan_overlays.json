@@ -1,0 +1,84 @@
+{
+  "decans": {
+    "1": {
+      "byRole": {
+        "sun": [
+          "First decan Sun often initiates quickly and defines direction through action."
+        ],
+        "moon": [
+          "First decan Moon reacts fast; emotional naming early improves regulation."
+        ],
+        "asc": [
+          "First decan Ascendant reads as direct and immediate in first contact."
+        ]
+      }
+    },
+    "2": {
+      "byRole": {
+        "sun": [
+          "Second decan Sun tends to consolidate intent through consistency and refinement."
+        ],
+        "moon": [
+          "Second decan Moon stabilizes by organizing needs into repeatable routines."
+        ],
+        "asc": [
+          "Second decan Ascendant signals measured confidence and practical pacing."
+        ]
+      }
+    },
+    "3": {
+      "byRole": {
+        "sun": [
+          "Third decan Sun often integrates multiple priorities and adapts strategy quickly."
+        ],
+        "moon": [
+          "Third decan Moon benefits from flexibility while still closing emotional loops."
+        ],
+        "asc": [
+          "Third decan Ascendant appears adaptive, curious, and responsive to context."
+        ]
+      }
+    }
+  },
+  "segments": {
+    "early": {
+      "byRole": {
+        "sun": [
+          "Early phase amplifies initiation: clarify priorities before expanding scope."
+        ],
+        "moon": [
+          "Early phase Moon asks for quick signal detection before escalation."
+        ],
+        "asc": [
+          "Early phase Ascendant can feel immediate; pacing helps sustain trust."
+        ]
+      }
+    },
+    "mid": {
+      "byRole": {
+        "sun": [
+          "Mid phase supports steadier execution and identity consistency."
+        ],
+        "moon": [
+          "Mid phase Moon supports stabilization through naming and structure."
+        ],
+        "asc": [
+          "Mid phase Ascendant reads balanced and process-oriented."
+        ]
+      }
+    },
+    "late": {
+      "byRole": {
+        "sun": [
+          "Late phase favors synthesis: simplify choices to avoid diffusion."
+        ],
+        "moon": [
+          "Late phase Moon benefits from completion rituals and emotional closure."
+        ],
+        "asc": [
+          "Late phase Ascendant often reads adaptive; boundaries keep clarity."
+        ]
+      }
+    }
+  }
+}

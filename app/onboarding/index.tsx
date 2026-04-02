@@ -2,8 +2,9 @@ import { router } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { normalizeBirthInput } from '@/lib/astro/input';
 import { useLocale } from '@/lib/i18n/useLocale';
-import { ButtonPrimary, Card, Screen, SectionHeader, TextField } from '@/src/components';
+import { ButtonPrimary, ButtonSecondary, Card, Screen, SectionHeader, TextField } from '@/src/components';
 import { colors } from '@/src/theme/colors';
 import { radius } from '@/src/theme/radius';
 import { spacing } from '@/src/theme/spacing';
@@ -41,24 +42,25 @@ function hasText(value: string): boolean {
 function toBirthInput(form: OnboardingFormState): BirthInput {
   const includeCoordinates = hasText(form.latitude) && hasText(form.longitude);
   return {
-    date: form.date,
-    time: form.time,
-    place: form.place.trim(),
-    latitude: includeCoordinates ? Number(form.latitude) : undefined,
-    longitude: includeCoordinates ? Number(form.longitude) : undefined,
-    timezone: form.timezone,
+    dateISO: form.date,
+    timeHHmm: form.time,
+    placeName: form.place.trim(),
+    lat: includeCoordinates ? Number(form.latitude) : undefined,
+    lon: includeCoordinates ? Number(form.longitude) : undefined,
+    timezone: form.timezone || undefined,
   };
 }
 
 function toFormState(profileLabel: string, input: BirthInput): OnboardingFormState {
+  const normalized = normalizeBirthInput(input);
   return {
     label: profileLabel,
-    date: input.date,
-    time: input.time,
-    place: input.place,
-    latitude: input.latitude !== undefined ? String(input.latitude) : '',
-    longitude: input.longitude !== undefined ? String(input.longitude) : '',
-    timezone: input.timezone,
+    date: normalized.dateISO,
+    time: normalized.timeHHmm,
+    place: normalized.placeName,
+    latitude: normalized.lat !== undefined ? String(normalized.lat) : '',
+    longitude: normalized.lon !== undefined ? String(normalized.lon) : '',
+    timezone: normalized.timezone ?? 'UTC',
   };
 }
 
@@ -75,8 +77,10 @@ export default function OnboardingScreen() {
     timezone: 'UTC',
   });
   const [mode, setMode] = useState<'create' | 'update'>(activeProfile ? 'update' : 'create');
-  const [showAdvanced, setShowAdvanced] = useState<boolean>(false);
+  const [showAdvanced, setShowAdvanced] = useState<boolean>(true);
   const [submitting, setSubmitting] = useState<boolean>(false);
+  const [locating, setLocating] = useState<boolean>(false);
+  const [locatingMessage, setLocatingMessage] = useState<string>('');
 
   const createProfile = useBirthcodeStore((state) => state.createProfile);
   const updateProfileBirthInput = useBirthcodeStore((state) => state.updateProfileBirthInput);
@@ -112,6 +116,44 @@ export default function OnboardingScreen() {
 
   const isSubmitDisabled = Boolean(formError) || isLoading || submitting;
 
+  const autofillCoordinates = async () => {
+    const place = form.place.trim();
+    if (!place || locating) {
+      return;
+    }
+
+    setLocating(true);
+    setLocatingMessage('');
+    try {
+      const endpoint = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(place)}&count=1&language=en&format=json`;
+      const response = await fetch(endpoint);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      const payload = await response.json() as {
+        results?: Array<{ latitude?: number; longitude?: number; timezone?: string }>;
+      };
+      const hit = payload.results?.[0];
+      if (hit?.latitude === undefined || hit?.longitude === undefined) {
+        throw new Error(t('onboarding.locationNotFound'));
+      }
+
+      setForm((previous) => ({
+        ...previous,
+        latitude: String(hit.latitude),
+        longitude: String(hit.longitude),
+        timezone: hit.timezone || previous.timezone || 'UTC',
+      }));
+      setShowAdvanced(true);
+      setLocatingMessage(t('onboarding.locationFound'));
+    } catch (error) {
+      const message = error instanceof Error ? error.message : t('onboarding.locationLookupFailed');
+      setLocatingMessage(message || t('onboarding.locationLookupFailed'));
+    } finally {
+      setLocating(false);
+    }
+  };
+
   const onSubmit = async () => {
     if (isSubmitDisabled) {
       return;
@@ -123,11 +165,11 @@ export default function OnboardingScreen() {
       let targetProfileId = activeProfile?.id ?? null;
 
       if (mode === 'update' && activeProfile) {
-        updateProfileBirthInput(activeProfile.id, payload);
-        updateProfileLabel(activeProfile.id, form.label);
+        await updateProfileBirthInput(activeProfile.id, payload);
+        await updateProfileLabel(activeProfile.id, form.label);
         targetProfileId = activeProfile.id;
       } else {
-        targetProfileId = createProfile(form.label, payload);
+        targetProfileId = await createProfile(form.label, payload);
       }
 
       if (!targetProfileId) {
@@ -198,6 +240,10 @@ export default function OnboardingScreen() {
             value={form.place}
             onChangeText={(value) => setForm((previous) => ({ ...previous, place: value }))}
           />
+          <ButtonSecondary
+            label={locating ? t('onboarding.locating') : t('onboarding.autofillCoordinates')}
+            onPress={() => void autofillCoordinates()}
+          />
           <TextField
             label={t('onboarding.timezoneLabel')}
             placeholder={t('onboarding.timezonePlaceholder')}
@@ -232,6 +278,7 @@ export default function OnboardingScreen() {
               />
             </View>
           ) : null}
+          {locatingMessage ? <Text style={styles.helper}>{locatingMessage}</Text> : null}
           {formError ? <Text style={styles.error}>{formError}</Text> : null}
           {error ? <Text style={styles.error}>{error}</Text> : null}
           <View style={styles.action}>
@@ -295,6 +342,10 @@ const styles = StyleSheet.create({
   },
   error: {
     color: colors.danger,
+    fontSize: typography.bodySm,
+  },
+  helper: {
+    color: colors.textMuted,
     fontSize: typography.bodySm,
   },
 });

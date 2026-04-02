@@ -1,0 +1,69 @@
+{
+  "screen": {
+    "title": "Wielka Trójka",
+    "intro": "Wielka Trójka opisuje trzy warstwy, które zwykle są najbardziej odczuwalne w codziennym działaniu: długofalowy kierunek i to, co ma dla Ciebie sens (Słońce), potrzeby emocjonalne oraz sposób wracania do równowagi po stresie (Księżyc), a także styl pierwszego kontaktu — to, jak wchodzisz w nowe sytuacje i jak jesteś czytany na starcie (Ascendent). Traktuj te opisy jako mapę wzorców do obserwacji i rozwoju, a nie jako sztywne etykiety."
+  },
+  "sun": {
+    "title": "Słońce",
+    "description": "Tożsamość, kierunek i to, co ma sens budować w dłuższej perspektywie.",
+    "shortSummary": "Wewnętrzny kompas: sens, cel i rodzaj wkładu, który Cię zasila, gdy jesteś w zgodzie ze sobą.",
+    "longDescription": "Słońce wskazuje długofalowy kierunek — to, co naturalnie chcesz budować, kiedy nie reagujesz wyłącznie na bieżące sprawy. Opisuje, jak definiujesz sens, dumę i poczucie celu. Gdy ta warstwa jest wspierana, działasz z klarownością i szacunkiem do siebie. Gdy jest chronicznie frustrowana, łatwo wejść w gonitwę za aprobatą, przepracowywanie się dla uznania albo wybieranie ról, które dobrze wyglądają, ale po cichu drenują.",
+    "howItShowsUp": [
+      "Role i projekty, do których wracasz z czasem",
+      "Jak definiujesz sukces, gdy jesteś wobec siebie szczery",
+      "Jaki rodzaj wyzwania daje Ci energię, a nie tylko zajętość"
+    ],
+    "watchOutFor": [
+      "Gonitwa za aprobatą zamiast zgodą ze sobą",
+      "Mylenie zajętości z postępem",
+      "Utożsamienie wartości ze statusem lub wynikiem"
+    ],
+    "microActions": [
+      "Napisz jedno zdanie: „Sukces dla mnie w tym roku to…”.",
+      "Wybierz jedną cotygodniową akcję (30–60 minut), która to wspiera.",
+      "Nazwij jedną granicę, która to chroni."
+    ]
+  },
+  "moon": {
+    "title": "Księżyc",
+    "description": "Potrzeby emocjonalne, regulacja i sposób regeneracji po stresie.",
+    "shortSummary": "Instrukcja obsługi emocji: co Cię stabilizuje, co robisz pod presją i co Cię regeneruje.",
+    "longDescription": "Księżyc opisuje regulację emocji jako praktyczny przewodnik po Twoim układzie nerwowym. Pod presją wiele osób wchodzi w automaty: eskalację, wycofanie, tłumaczenie się ponad miarę albo próbę kontrolowania wszystkiego. W ujęciu CBT-lite można z tym pracować bez oceniania: rozpoznaj wyzwalacz, zauważ automatyczną reakcję, nazwij koszt, wybierz alternatywną odpowiedź, a potem dodaj jeden ruch regeneracyjny.",
+    "howItShowsUp": [
+      "Co realnie Cię rozładowuje po napięciu (a co dokłada bodźców)",
+      "Twoja domyślna reakcja na stres",
+      "Jak szybko wracasz do siebie po konflikcie"
+    ],
+    "watchOutFor": [
+      "Ignorowanie sygnałów aż do przeciążenia",
+      "Traktowanie intensywności jako dowodu",
+      "Unikanie lub przepracowanie jako substytut regulacji"
+    ],
+    "microActions": [
+      "Nazwij najwcześniejszy sygnał stresu (ciało/myśl/impuls).",
+      "Wybierz jeden 2-minutowy ruch regulacyjny „na wszędzie”.",
+      "Przećwicz jedną czystą prośbę: „Potrzebuję X; czy możemy zrobić Y?”"
+    ]
+  },
+  "ascendant": {
+    "title": "Ascendent",
+    "description": "Pierwsze wrażenie i domyślny sposób zaczynania w nowych sytuacjach.",
+    "shortSummary": "Styl pierwszego kontaktu: jak wchodzisz w nowe sytuacje i jak inni czytają Cię na początku.",
+    "longDescription": "Ascendent opisuje domyślną strategię startu — szczególnie wtedy, gdy nie ma czasu na analizę. To nie jest sztuczna maska; to wzorzec ukształtowany przez temperament i doświadczenie. Celem jest elastyczność: wybierać sposób wejścia świadomie, zamiast odpalać go na autopilocie.",
+    "howItShowsUp": [
+      "Jak ustawiasz ton w nowych kontekstach",
+      "Co ludzie zakładają o Tobie na początku",
+      "Co robisz jako pierwsze pod presją"
+    ],
+    "watchOutFor": [
+      "Utkwienie w roli „wersji startowej”",
+      "Nadkompensacja po to, by zarządzać odbiorem",
+      "Wejście zbyt mocne albo zbyt miękkie względem sytuacji"
+    ],
+    "microActions": [
+      "Wybierz intencję (co chcesz stworzyć), a nie obraz (jak chcesz wypaść).",
+      "Zacznij od jednego jasnego pytania, które buduje kontekst.",
+      "Po wszystkim zanotuj: co było naturalne, a co wymuszone."
+    ]
+  }
+}

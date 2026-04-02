@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "type": "role_overlays",
+  "roles": {
+    "sun": {
+      "id": "role.sun",
+      "label": "Słońce",
+      "purpose": "Tożsamość, kierunek i to, co ma sens budować w dłuższej perspektywie.",
+      "rules": {
+        "emphasizeSegments": ["core_motive", "strength_expression", "work_pattern"],
+        "deemphasizeSegments": ["relationship_pattern"],
+        "tone": "agentic"
+      },
+      "templates": {
+        "opening": [
+          "Twoje Słońce opisuje tę część Ciebie, która potrzebuje kierunku: wartości, na których możesz stać, rodzaj postępu, który ma sens, oraz tożsamość, w którą dorastasz poprzez wybory i konsekwencję.",
+          "Gdy ta warstwa jest odżywiona, zwykle działasz z klarownością i szacunkiem do siebie. Gdy jest chronicznie blokowana, łatwo wejść w gonitwę za aprobatą, przepracowywanie się dla uznania albo wybieranie ról, które wyglądają „dobrze”, ale po cichu drenują."
+        ],
+        "anchors": [
+          "Traktuj Słońce jak długodystansowy kompas: wskazuje, co chcesz budować, kiedy nie reagujesz wyłącznie na bieżące bodźce.",
+          "To mniej pytanie „kim powinienem być”, a bardziej: „jaki kierunek sprawia, że jestem w zgodzie ze sobą”."
+        ],
+        "integrationCue": [
+          "Dobrze ustawione Słońce nie usuwa trudności. Sprawia, że trudność jest do uniesienia, bo wysiłek służy czemuś, co potrafisz szanować."
+        ]
+      }
+    },
+    "moon": {
+      "id": "role.moon",
+      "label": "Księżyc",
+      "purpose": "Potrzeby emocjonalne, wzorce regulacji i sposób wracania do równowagi po stresie.",
+      "rules": {
+        "emphasizeSegments": ["needs_language", "cbt_loop_bias", "relationship_pattern", "shadow_expression"],
+        "tone": "regulation"
+      },
+      "templates": {
+        "opening": [
+          "Twój Księżyc opisuje potrzeby emocjonalne i regulację: co Cię stabilizuje, co uruchamia się automatycznie pod presją oraz co realnie przywraca Cię do równowagi, gdy życie robi się głośne.",
+          "To nie jest etykieta nastroju. To praktyczna perspektywa układu nerwowego: gdy znasz swój wzorzec Księżyca, szybciej rozpoznajesz napięcie i odzyskujesz wybór zamiast działać na autopilocie."
+        ],
+        "anchors": [
+          "W przeciążeniu wiele osób wraca do znanej pętli (eskalacja, wycofanie, tłumaczenie się ponad miarę, kontrolowanie). Księżyc pomaga nazwać Tw?ją pętlę bez oceniania.",
+          "Regulacja to nie tłumienie. To zdolność pozostania w kontakcie ze sobą i jednocześnie mądrej reakcji."
+        ],
+        "integrationCue": [
+          "Gdy potrzeby Księżyca są ignorowane zbyt długo, nawet mocne strony zaczynają się strzępić. Wspieranie tej warstwy chroni resztę."
+        ]
+      }
+    },
+    "asc": {
+      "id": "role.asc",
+      "label": "Ascendent",
+      "purpose": "Styl pierwszego kontaktu: jak wchodzisz w sytuacje i jak inni czytają Cię na starcie.",
+      "rules": {
+        "emphasizeSegments": ["strength_expression", "relationship_pattern"],
+        "tone": "entry"
+      },
+      "templates": {
+        "opening": [
+          "Twój Ascendent opisuje domyślną strategię startu: jak wchodzisz w nowe sytuacje zanim pojawi się czas na analizę, oraz jaki rodzaj pierwszego wrażenia zwykle tworzysz sw?ją obecnością.",
+          "To nie jest sztuczna maska. To funkcjonalny wzorzec ukształtowany przez temperament i doświadczenie — sposób zaczynania wtedy, gdy nie edytujesz się świadomie."
+        ],
+        "anchors": [
+          "Ascendent jest najbardziej widoczny w momentach przejść: nowe miejsca, nowi ludzie, nowe role, nowa presja.",
+          "Rozwój polega tu na elastyczności: wybierasz sposób wejścia świadomie, zamiast uruchamiać go automatycznie."
+        ],
+        "integrationCue": [
+          "Gdy Ascendent jest spójny z kierunkiem Słońca i potrzebami Księżyca, czujesz wewnętrzną koherencję. Gdy nie jest, możesz mieć poczucie niezrozumienia albo „grania roli” bez jasnego powodu."
+        ]
+      }
+    }
+  }
+}

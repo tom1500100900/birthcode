@@ -13,3 +13,7 @@ export const segments = {
     text: "Późny segment znaku daje dojrzałość i zdolność integrowania doświadczeń."
   }
 }
+
+export function segmentSnippet(segmentKey: 'early' | 'mid' | 'late'): { id: string; text: string } | null {
+  return segments[segmentKey] ?? null;
+}

@@ -1,0 +1,40 @@
+{
+  "library": [
+    {
+      "id": "practice_two_minute_regulation",
+      "title": "2-Minute Regulation Reset",
+      "shortSummary": "A tiny intervention to stop escalation and regain choice.",
+      "rationale": "Under stress, your body often reacts before your mind. This practice creates a small gap between trigger and response — the gap where autonomy lives. It is intentionally short so it works in real life: before a message, during conflict, or when urgency takes over.",
+      "durationMinutes": 2,
+      "steps": [
+        "Name the moment in one phrase: “This is the trigger.”",
+        "Exhale longer than you inhale for 6–8 breaths.",
+        "Relax jaw and shoulders; feel your feet on the ground.",
+        "Choose one response: a boundary, a question, or a short break."
+      ],
+      "difficulty": "easy",
+      "reflectionAfter": [
+        "What changed in my body after two minutes?",
+        "Which response did I choose that I would not have chosen on autopilot?"
+      ]
+    },
+    {
+      "id": "practice_clean_request",
+      "title": "Clean Request (One Sentence)",
+      "shortSummary": "Replace hints and pressure with a clear, respectful ask.",
+      "rationale": "Many conflicts escalate because needs are communicated indirectly. This practice supports relatedness without sacrificing autonomy. It also increases competence: people can respond to what is actually being asked.",
+      "durationMinutes": 5,
+      "steps": [
+        "Name what you need (not what they did wrong).",
+        "Make one specific request that can receive a yes/no.",
+        "Add one sentence of context (why it matters).",
+        "Pause and let the other person respond without arguing."
+      ],
+      "difficulty": "medium",
+      "reflectionAfter": [
+        "Did I ask for a need, or for a story in my head to be fixed?",
+        "What happened when I stopped overexplaining?"
+      ]
+    }
+  ]
+}

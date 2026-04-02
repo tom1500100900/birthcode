@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "type": "dominant_overlays",
+  "elements": {
+    "fire": {
+      "text": [
+        "A Fire dominance adds momentum and forward drive. Action feels clarifying: you understand yourself best through movement and visible progress.",
+        "When balanced, this creates courage and initiative. When unbalanced, it can tilt toward impatience or burnout."
+      ],
+      "watchOut": [
+        "All-or-nothing effort",
+        "Acting before emotional processing"
+      ],
+      "microRecs": [
+        "Work in short, focused sprints",
+        "Build intentional recovery between pushes"
+      ]
+    },
+    "earth": {
+      "text": [
+        "An Earth dominance emphasizes practicality and grounded decision-making. Stability, structure and tangible results matter deeply.",
+        "When resourced, this builds reliability and competence. Under stress, it may harden into rigidity or over-control."
+      ],
+      "watchOut": [
+        "Over-responsibility",
+        "Difficulty delegating"
+      ],
+      "microRecs": [
+        "Define what is 'good enough'",
+        "Create visible milestones rather than endless refinement"
+      ]
+    },
+    "air": {
+      "text": [
+        "An Air dominance highlights perspective, dialogue and conceptual thinking. You process life through ideas and conversation.",
+        "Balanced, this brings adaptability and insight. When strained, it can become over-analysis or detachment."
+      ],
+      "watchOut": [
+        "Endless comparison",
+        "Intellectualizing emotions"
+      ],
+      "microRecs": [
+        "Move decisions from thought to action within clear time limits",
+        "Practice naming feelings without over-explaining them"
+      ]
+    },
+    "water": {
+      "text": [
+        "A Water dominance deepens emotional awareness and relational sensitivity. Meaning is felt before it is explained.",
+        "In strength, this creates empathy and intuitive understanding. Under stress, it may slide into overwhelm or withdrawal."
+      ],
+      "watchOut": [
+        "Emotional over-identification",
+        "Avoidance through retreat"
+      ],
+      "microRecs": [
+        "Clarify boundaries explicitly",
+        "Schedule structured alone-time for recovery"
+      ]
+    }
+  },
+  "modalities": {
+    "cardinal": {
+      "text": [
+        "Cardinal energy initiates. You are wired to begin, push forward, and create momentum.",
+        "The growth edge is sustaining energy beyond the launch phase."
+      ],
+      "watchOut": [
+        "Starting more than you can finish"
+      ],
+      "microRecs": [
+        "Limit active priorities",
+        "Define completion before initiation"
+      ]
+    },
+    "fixed": {
+      "text": [
+        "Fixed energy stabilizes and protects what matters. You bring persistence and depth.",
+        "The growth edge is flexibility without feeling destabilized."
+      ],
+      "watchOut": [
+        "Stubbornness under pressure"
+      ],
+      "microRecs": [
+        "Introduce controlled change in small increments",
+        "Differentiate loyalty from rigidity"
+      ]
+    },
+    "mutable": {
+      "text": [
+        "Mutable energy adapts and integrates. You adjust quickly and read context well.",
+        "The growth edge is choosing direction instead of endlessly adapting."
+      ],
+      "watchOut": [
+        "Drifting without commitment"
+      ],
+      "microRecs": [
+        "Set time-bound experiments",
+        "Commit publicly to one priority"
+      ]
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "type": "dominant_overlays",
+  "elements": {
+    "fire": {
+      "text": [
+        "Dominanta Ognia wnosi dynamikę i potrzebę ruchu. Działanie pomaga Ci zrozumieć siebie — klarowność pojawia się poprzez widoczny postęp.",
+        "W równowadze daje odwagę i inicjatywę. W przeciążeniu może prowadzić do niecierpliwości lub wypalenia."
+      ],
+      "watchOut": [
+        "Działanie zero-jedynkowe",
+        "Reakcja zanim pojawi się refleksja"
+      ],
+      "microRecs": [
+        "Pracuj w krótkich sprintach",
+        "Wpisz regenerację w plan działania"
+      ]
+    },
+    "earth": {
+      "text": [
+        "Dominanta Ziemi podkreśla praktyczność i potrzebę struktury. Stabilność i namacalne efekty mają dla Ciebie znaczenie.",
+        "W sile daje rzetelność i kompetencję. Pod presją może zamienić się w nadkontrolę lub sztywność."
+      ],
+      "watchOut": [
+        "Nadmierna odpowiedzialność",
+        "Trudność w delegowaniu"
+      ],
+      "microRecs": [
+        "Zdefiniuj, co oznacza „wystarczająco dobrze”",
+        "Ustal mierzalne etapy zamiast ciągłego dopracowywania"
+      ]
+    },
+    "air": {
+      "text": [
+        "Dominanta Powietrza wzmacnia perspektywę, dialog i myślenie koncepcyjne. Przetwarzasz świat poprzez idee i rozmowę.",
+        "W równowadze daje elastyczność i wgląd. W napięciu może prowadzić do nadmiernej analizy lub dystansu emocjonalnego."
+      ],
+      "watchOut": [
+        "Porównywanie się bez końca",
+        "Intelektualizowanie uczuć"
+      ],
+      "microRecs": [
+        "Wyznacz limit czasu na decyzję",
+        "Nazywaj emocje bez nadmiernego tłumaczenia"
+      ]
+    },
+    "water": {
+      "text": [
+        "Dominanta Wody pogłębia wrażliwość i intuicję relacyjną. Znaczenie jest odczuwane zanim zostanie nazwane.",
+        "W sile daje empatię i subtelne rozumienie innych. Pod presją może prowadzić do przeciążenia lub wycofania."
+      ],
+      "watchOut": [
+        "Nadmierne utożsamianie się z cudzymi emocjami",
+        "Unikanie poprzez odcięcie"
+      ],
+      "microRecs": [
+        "Stawiaj jasne granice",
+        "Planuj świadomy czas regeneracji"
+      ]
+    }
+  },
+  "modalities": {
+    "cardinal": {
+      "text": [
+        "Energia kardynalna inicjuje. Naturalnie zaczynasz i tworzysz impuls.",
+        "Wyzwaniem jest utrzymanie tempa po fazie startu."
+      ],
+      "watchOut": [
+        "Rozpoczynanie zbyt wielu rzeczy naraz"
+      ],
+      "microRecs": [
+        "Ogranicz liczbę aktywnych celów",
+        "Zdefiniuj zakończenie zanim zaczniesz"
+      ]
+    },
+    "fixed": {
+      "text": [
+        "Energia stała stabilizuje i chroni to, co ważne. Wnosisz wytrwałość i głębię.",
+        "Wyzwaniem jest elastyczność bez poczucia utraty kontroli."
+      ],
+      "watchOut": [
+        "Upór pod presją"
+      ],
+      "microRecs": [
+        "Wprowadzaj zmiany etapami",
+        "Odróżniaj lojalność od sztywności"
+      ]
+    },
+    "mutable": {
+      "text": [
+        "Energia zmienna adaptuje i integruje. Szybko czytasz kontekst i dostosowujesz się.",
+        "Wyzwaniem jest wybranie kierunku zamiast nieustannego dostosowywania się."
+      ],
+      "watchOut": [
+        "Dryfowanie bez decyzji"
+      ],
+      "microRecs": [
+        "Ustal eksperymenty z limitem czasu",
+        "Publicznie zobowiąż się do jednego priorytetu"
+      ]
+    }
+  }
+}

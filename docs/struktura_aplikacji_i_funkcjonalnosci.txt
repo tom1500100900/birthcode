@@ -1,0 +1,155 @@
+﻿BIRTHCODE - struktura aplikacji i stan funkcjonalny
+Data aktualizacji: 2026-03-02
+
+1) Stack i architektura
+- Frontend: React Native + Expo + expo-router (file-based routing)
+- State management: Zustand (store lokalny + persystencja AsyncStorage)
+- Backend: Supabase (Auth, tabele profiles/astro_results, Edge Functions)
+- Jezyki: EN/PL (i18n + content packs)
+
+2) Struktura katalogow (wysoki poziom)
+- app/
+  - _layout.tsx: root layout, inicjalizacja sesji guest, sync profili, redirect gdy brak profilu
+  - index.tsx: ekran startowy (welcome)
+  - onboarding/index.tsx: tworzenie/edycja profilu + generowanie chartu
+  - profiles.tsx: lista profili, wybor aktywnego, rename, delete
+  - auth.tsx: logowanie e-mail OTP + migracja konta guest->user
+  - (tabs)/
+    - _layout.tsx: konfiguracja tabs + header
+    - profile.tsx: profil/interpretacja + share/copy
+    - chart.tsx: podglad chartu (big three, planety, aspekty, dominanty)
+    - insights.tsx: insighty z filtrowaniem i zapisem
+    - acts.tsx: praktyki z filtrowaniem i zapisem
+    - saved.tsx: zapisane insighty/praktyki
+    - settings.tsx: ustawienia, jezyk, export, reset, akcje Supabase (dev)
+    - definitions.tsx: slownik/wyjasnienia astro + przelacznik jezyka
+    - ask.tsx: offline Q&A (modul legacy, ukryty w tabach)
+
+- store/
+  - useBirthcodeStore.ts: glowny store (profile, active profile, zapisy, sync, astro)
+  - useLocaleStore.ts: jezyk aplikacji (EN/PL) + persist
+  - useToastStore.ts: prosty globalny toast
+
+- lib/
+  - astro/: normalizacja inputu, labelki, generatory i mapowanie wynikow
+  - content-engine/: interpretacja astro na podstawie content pack
+  - supabase/: klient, auth, repozytoria profili i wynikow astro
+  - reports/: budowanie raportu summary/full do share/copy
+  - i18n/: hook locale + tlumaczenia runtime
+  - copy/: text builders dla kart
+
+- supabase/
+  - migrations/: SQL dla tabel i migracji auth/astro
+  - functions/astro-engine-v1, astro-engine-v2, astro-engine-v3: edge functions do wyliczen/cache
+
+- content/, locales/: zasoby tresci i tlumaczen
+- src/: komponenty UI, theme, legacy utility
+
+3) Funkcjonalnosci wykonane (potwierdzone w kodzie)
+A. Profil i onboarding
+- Tworzenie nowego profilu z danymi urodzeniowymi
+- Tryb update istniejacego profilu (onboarding jako create/update)
+- Walidacja formularza (data, czas, miejsce, timezone, wspolrzedne)
+- Autofill wspolrzednych po nazwie miejsca (Open-Meteo geocoding)
+- Generowanie wyniku astro po zapisie profilu
+
+B. Zarzadzanie profilami
+- Lista profili sortowana po updatedAt
+- Ustawianie aktywnego profilu
+- Zmiana nazwy profilu
+- Usuwanie profilu z potwierdzeniem
+- Podglad skrotu Sun/Moon/Asc dla profili z wynikiem
+
+C. Astro + backend
+- Sync profili z Supabase (list/insert/upsert/delete)
+- Pobieranie/generowanie wyniku astro przez Edge Function
+- Priorytet v3 + fallback do v2 i v1
+- Cache preview per profil (source + engine version + big three)
+- Persist stanu lokalnego store (profiles/saved/active)
+
+D. Ekrany merytoryczne
+- Profile: sekcje core/strengths/risks/recommendations, collapse, copy/share
+- Chart: Asc, planety, aspekty, dominant element/modality + info sheet
+- Insights: filtry kategorii, zapisywanie, copy karty
+- Practices (acts): filtry, kroki, expected outcome, zapisywanie, copy
+- Saved: agregacja zapisanych insightow i praktyk, filtrowanie, remove
+- Definitions: slownik pojec + tresci EN/PL
+
+E. I18n i content
+- Przelaczanie jezyka EN/PL (welcome/settings/definitions i inne ekrany)
+- Persist jezyka w AsyncStorage
+- Interpretacja content-engine zalezna od locale
+- Auto-regeneracja insightow/praktyk przy zmianie jezyka
+
+F. Auth i konto
+- Sesja guest (anonymous) na starcie aplikacji
+- Logowanie OTP e-mail
+- Migracja danych guest->user (RPC migrate_guest_to_user)
+- Sign-out do guest + ponowny sync profili
+
+G. Ustawienia i narzedzia
+- Export danych do schowka (JSON)
+- Reset lokalnych danych + powrot do onboarding
+- Dev tools: test supabase, insert debug profile, load profiles
+
+4) Co jest schowane/legacy lub do dopracowania
+- Tabs ukrywaja niektore ekrany (`index`, `explore`, `ask`) - `ask` dziala, ale jest flowem offline legacy
+- Przelaczniki dark mode/notifications w settings sa UI-only (brak pelnej logiki biznesowej)
+- README ma artefakty kodowania (warto uporzadkowac UTF-8)
+
+5) Priorytetowe miejsca do dalszego rozwoju
+- app/onboarding/index.tsx (UX formularza + geolokalizacja)
+- store/useBirthcodeStore.ts (logika centralna i sync)
+- lib/supabase/astroRepo.ts (integracja edge function i fallback)
+- lib/content-engine/interpret.ts (jak powstaje interpretacja)
+- app/(tabs)/profile.tsx, insights.tsx, acts.tsx, saved.tsx (glowny user flow)
+
+6) Szybki start developerski
+- npm install
+- npm run start
+- opcjonalnie: npx tsc --noEmit, npm run lint
+
+7) Podsumowanie ostatnich zmian: astro-engine-v3 (Swiss/WASM)
+Data: 2026-03-02
+
+- Zdiagnozowano glowna przyczyne bledow v3: mieszanie kilku podejsc inicjalizacji Swiss (WASI + reczna instancjacja WebAssembly + rozne paczki), co prowadzilo do eksportow niskiego poziomu (__wbg_*) bez API swe_*.
+- Potwierdzono problemy runtime z poprzednimi podejsciami:
+  - 404 funkcji (brak deployu v3),
+  - 500: runtime fetch wasm (Aborted (both async and sync fetching of the wasm failed)),
+  - 500: WebAssembly.Module.imports(): Argument 0 must be a WebAssembly.Module,
+  - 500: brak poprawnych eksportow (fromModule=false, fromInstance=false, brak init/load),
+  - 500: Cannot read properties of undefined (reading 'exports').
+- Potwierdzono, ze fallback w repo dziala technicznie poprawnie:
+  - kolejnosc: v3 -> v2 -> v1,
+  - UI czesto pokazywal v2, bo v3 zwracal 500 i nastepowal automatyczny fallback.
+- W SQL potwierdzono przypadki zapisu engine_provider = fallback-v3, co oznacza dzialanie sciezki awaryjnej, a nie produkcyjnych obliczen Swiss w v3.
+
+Aktualny status techniczny (na moment aktualizacji):
+- Plik supabase/functions/astro-engine-v3/index.ts wymaga przywrocenia pelnej implementacji (w trakcie debugu zostal chwilowo nadpisany testowym placeholderem).
+- Docelowy kierunek dla v3:
+  - tylko jedna sciezka inicjalizacji Swiss,
+  - bez zewnetrznego SWISS API,
+  - bez mieszania kilku loaderow wasm,
+  - obliczenia UTC/JD przez luxon + realne swe_calc_ut i swe_houses.
+
+Checklist po przywroceniu kodu v3:
+1) Deploy funkcji: supabase functions deploy astro-engine-v3 --project-ref xultiwtenpkxnwxasjcz
+2) Wyczyzc cache v3 dla profilu testowego (SQL delete ... where engine_version='v3')
+3) Odswiezyc wynik w aplikacji (Refresh astro result)
+4) Potwierdzic w logach brak bledu 500 dla v3
+5) Potwierdzic w SQL nowy rekord engine_version='v3' z aktualnym updated_at
+6) Zweryfikowac, ze ASC zmienia sie po zmianie godziny/timezone
+
+Uwaga operacyjna:
+- Lokalny supabase functions serve wymaga dzialajacego Docker Desktop. Bez Dockera testy lokalne funkcji edge sa ograniczone.
+
+8) Komenda awaryjna: restart Expo i start przez tunnel (sprawdzona)
+- Uzywac przy problemach typu: telefon nie laduje aplikacji / failed to download remote update / niestabilny LAN.
+- Komendy:
+  Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force
+  Remove-Item -Recurse -Force .expo -ErrorAction SilentlyContinue
+  Remove-Item Env:CI -ErrorAction SilentlyContinue
+  npm.cmd run start -- --clear --host tunnel
+
+Koniec dokumentu.
+

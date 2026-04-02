@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "type": "degree_modifiers",
+  "bands": {
+    "early": {
+      "range": [0, 9],
+      "description": "Raw and direct expression of the sign’s energy.",
+      "byRole": {
+        "sun": [
+          "An early-degree Sun tends to express the sign’s core qualities more immediately and instinctively, often before they are refined by experience.",
+          "There is momentum and clarity here, but growth comes from patience and integration rather than speed alone."
+        ],
+        "moon": [
+          "An early-degree Moon may react quickly on an emotional level. The signal appears fast; learning to slow the response builds resilience.",
+          "Regulation improves when you create small, repeatable recovery practices."
+        ],
+        "asc": [
+          "An early-degree Ascendant often creates a strong and immediate first impression.",
+          "Your entry style can feel direct, visible, and hard to ignore."
+        ]
+      }
+    },
+    "mid": {
+      "range": [10, 19],
+      "description": "Balanced and integrated expression of the sign’s energy.",
+      "byRole": {
+        "sun": [
+          "A mid-degree Sun often expresses the sign in a more stable and balanced way.",
+          "There is usually room between impulse and action, which supports intentional direction."
+        ],
+        "moon": [
+          "A mid-degree Moon often shows greater emotional range and choice.",
+          "You may find it easier to name what you feel before it overwhelms you."
+        ],
+        "asc": [
+          "A mid-degree Ascendant tends to feel readable and grounded.",
+          "Others quickly understand your tone and approach."
+        ]
+      }
+    },
+    "late": {
+      "range": [20, 29],
+      "description": "Mature or intensified expression of the sign’s energy.",
+      "byRole": {
+        "sun": [
+          "A late-degree Sun can feel more seasoned — either integrated mastery or pressure from repeating the same pattern too long.",
+          "Growth often requires conscious renewal rather than pushing harder."
+        ],
+        "moon": [
+          "A late-degree Moon may carry depth and emotional memory.",
+          "Boundaries and structured recovery help prevent overload."
+        ],
+        "asc": [
+          "A late-degree Ascendant can appear composed and intentional.",
+          "There may be a sense of having learned how to manage first impressions strategically."
+        ]
+      }
+    }
+  }
+}

@@ -1,12 +1,13 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { router } from 'expo-router';
 
 import Card from '@/components/Card';
-import CopyButton from '@/components/CopyButton';
 import SectionTitle from '@/components/SectionTitle';
-import { buildPracticeCardText } from '@/lib/copy/textBuilders';
+import { buildPractices } from '@/lib/content-engine/buildPractices';
+import { toNormalizedAstroV2FromChart } from '@/lib/content-engine/chartAdapters';
+import { calcMetrics, detectTensions } from '@/lib/content-engine/psychoNarrative';
+import { categoryInsightHeader, toPolishInsightDisplay } from '@/lib/insights/plFallback';
 import { useLocale } from '@/lib/i18n/useLocale';
 import { ButtonPrimary } from '@/src/components';
 import { colors } from '@/src/theme/colors';
@@ -14,78 +15,67 @@ import { radius } from '@/src/theme/radius';
 import { spacing } from '@/src/theme/spacing';
 import { typography } from '@/src/theme/typography';
 import { selectActiveAstroResult, selectActiveProfile, useBirthcodeStore } from '@/store/useBirthcodeStore';
-import { ActItem, InsightCategory } from '@/types/astro';
+import type { InsightCategory } from '@/types/astro';
 
-type ActsFilter = 'all' | InsightCategory;
+type PracticesFilter = 'all' | InsightCategory;
 
-const CATEGORIES: ActsFilter[] = ['all', 'identity', 'career', 'relationships', 'stress'];
+const CATEGORIES: InsightCategory[] = ['identity', 'career', 'relationships', 'stress'];
+const FILTERS: PracticesFilter[] = ['all', ...CATEGORIES];
 
-interface StateScreenProps {
-  title: string;
-  message: string;
-}
+const FILTER_LABELS: Record<PracticesFilter, string> = {
+  all: 'Wszystkie',
+  identity: 'Tozsamosc',
+  career: 'Kariera',
+  relationships: 'Relacje',
+  stress: 'Stres',
+};
 
-function StateScreen({ title, message }: StateScreenProps) {
-  return (
-    <SafeAreaView style={styles.safeArea}>
-      <View style={styles.centered}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.text}>{message}</Text>
-      </View>
-    </SafeAreaView>
-  );
-}
-
-export default function ActsScreen() {
-  const { t, language } = useLocale();
-  const [filter, setFilter] = useState<ActsFilter>('all');
+export default function PracticesTab() {
+  useLocale();
   const activeProfile = useBirthcodeStore(selectActiveProfile);
   const astroResult = useBirthcodeStore(selectActiveAstroResult);
-  const isLoading = useBirthcodeStore((state) => state.isLoading);
-  const error = useBirthcodeStore((state) => state.error);
-  const savedPracticeIdsByProfile = useBirthcodeStore((state) => state.savedPracticeIdsByProfile);
-  const savedPracticeIds = activeProfile ? savedPracticeIdsByProfile[activeProfile.id] ?? [] : [];
-  const togglePracticeSaved = useBirthcodeStore((state) => state.togglePracticeSaved);
   const generateAstroResultForProfile = useBirthcodeStore((state) => state.generateAstroResultForProfile);
+  const [filter, setFilter] = useState<PracticesFilter>('all');
 
-  useEffect(() => {
-    if (!activeProfile || !astroResult) {
-      return;
+  const cards = useMemo(() => {
+    if (!astroResult) return [];
+    const normalized = toNormalizedAstroV2FromChart(astroResult.chart);
+    const metrics = calcMetrics(normalized);
+    return buildPractices({
+      lang: 'pl',
+      metrics: metrics.metrics,
+      tensions: detectTensions(metrics.metrics),
+    });
+  }, [astroResult]);
+
+  const insightsByCategory = useMemo(() => {
+    const out: Record<InsightCategory, { title: string; whyItMatters: string; questions: [string, string, string] }> = {
+      identity: categoryInsightHeader('identity'),
+      career: categoryInsightHeader('career'),
+      relationships: categoryInsightHeader('relationships'),
+      stress: categoryInsightHeader('stress'),
+    };
+    if (!astroResult) return out;
+    for (let i = 0; i < CATEGORIES.length; i += 1) {
+      const category = CATEGORIES[i];
+      const source = astroResult.insights.find((item) => item.category === category);
+      if (!source) continue;
+      out[category] = toPolishInsightDisplay(source, astroResult.contentLocale !== 'pl');
     }
-    if (astroResult.contentLocale === language) {
-      return;
-    }
-    if (__DEV__) {
-      console.log(`[practices] locale=${language}, regenerating content for profile=${activeProfile.id}`);
-    }
-    void generateAstroResultForProfile(activeProfile.id);
-  }, [activeProfile, astroResult, generateAstroResultForProfile, language]);
+    return out;
+  }, [astroResult]);
 
-  const filteredActs = useMemo(() => {
-    const acts = astroResult?.acts ?? [];
-    if (filter === 'all') {
-      return acts;
-    }
-    return acts.filter((item) => item.category === filter);
-  }, [astroResult, filter]);
+  const categoriesToRender = filter === 'all' ? CATEGORIES : [filter];
 
-  if (isLoading) {
-    return <StateScreen title={t('practices.loadingTitle')} message={t('practices.loadingMessage')} />;
-  }
-
-  if (error) {
-    return <StateScreen title={t('practices.errorTitle')} message={error} />;
-  }
-
-  if (!astroResult) {
+  if (!activeProfile || !astroResult) {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.centered}>
-          <Text style={styles.title}>{t('practices.emptyTitle')}</Text>
-          <Text style={styles.text}>{t('practices.emptyMessage')}</Text>
+          <Text style={styles.title}>Brak praktyk</Text>
+          <Text style={styles.text}>Wygeneruj dane astro dla aktywnego profilu.</Text>
           {activeProfile ? (
             <ButtonPrimary
-              label={t('profile.generateNow')}
+              label="Generuj dane"
               onPress={() => void generateAstroResultForProfile(activeProfile.id)}
             />
           ) : null}
@@ -98,80 +88,51 @@ export default function ActsScreen() {
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.container}>
-          <SectionTitle title={t('practices.title')} subtitle={t('practices.subtitle')} />
-          <Card>
-            <Text style={styles.text}>{t('practices.intro')}</Text>
-            <Text style={styles.textMuted}>{t('practices.staticLine')}</Text>
-          </Card>
-          <Card>
-            <SectionTitle title={t('premium.dailyTitle')} />
-            <Text style={styles.text}>{t('premium.dailyBody')}</Text>
-            <View style={styles.dailyFooter}>
-              <Pressable style={styles.dailyButton} onPress={() => router.push('/(tabs)/definitions')}>
-                <Text style={styles.dailyButtonText}>{t('premium.learnMore')}</Text>
-              </Pressable>
-            </View>
-          </Card>
-          <Text style={styles.savedHint}>{t('practices.savedHint')}</Text>
-
+          <SectionTitle title="Praktyki" subtitle="Wnioski i praktyki w jednym miejscu" />
           <View style={styles.filters}>
-            {CATEGORIES.map((category) => {
-              const active = category === filter;
-              return (
-                <Pressable
-                  key={category}
-                  onPress={() => setFilter(category)}
-                  style={[styles.filterChip, active && styles.filterChipActive]}>
-                  <Text style={[styles.filterText, active && styles.filterTextActive]}>
-                    {t(`categories.${category}`)}
-                  </Text>
-                </Pressable>
-              );
-            })}
+            {FILTERS.map((item) => (
+              <Pressable
+                key={item}
+                style={[styles.filterChip, item === filter && styles.filterChipActive]}
+                onPress={() => setFilter(item)}>
+                <Text style={[styles.filterText, item === filter && styles.filterTextActive]}>{FILTER_LABELS[item]}</Text>
+              </Pressable>
+            ))}
           </View>
 
-          {filteredActs.length === 0 ? (
-            <Card>
-              <Text style={styles.text}>{t('practices.emptyFilter')}</Text>
-            </Card>
-          ) : (
-            filteredActs.map((item: ActItem) => {
-              const saved = savedPracticeIds.includes(item.id);
-              return (
-                <Card key={item.id}>
-                  <View style={styles.cardHeader}>
-                    <View style={styles.cardHeaderTextWrap}>
+          {categoriesToRender.map((category) => {
+            const categoryPractices = cards.filter((item) => item.category === category);
+            const insight = insightsByCategory[category];
+            return (
+              <View key={category} style={styles.categoryStack}>
+                <Card>
+                  <SectionTitle title={insight.title} subtitle={FILTER_LABELS[category]} />
+                  <Text style={styles.text}>{insight.whyItMatters}</Text>
+                </Card>
+
+                {categoryPractices.length === 0 ? (
+                  <Card>
+                    <Text style={styles.text}>Wkrotce wiecej praktyk w tej kategorii.</Text>
+                  </Card>
+                ) : (
+                  categoryPractices.map((item) => (
+                    <Card key={item.id}>
                       <SectionTitle
                         title={item.title}
-                        subtitle={t('practices.durationLine', {
-                          category: t(`categories.${item.category}`),
-                          duration: item.durationMinutes,
-                        })}
+                        subtitle={`${FILTER_LABELS[item.category]} • ${item.durationMin} min`}
                       />
-                    </View>
-                    <CopyButton textToCopy={buildPracticeCardText(item)} />
-                  </View>
-                  <SectionTitle title={t('practices.steps')} />
-                  {item.steps.map((step, index) => (
-                    <Text key={`${item.id}-step-${index}`} style={styles.text}>
-                      {index + 1}. {step}
-                    </Text>
-                  ))}
-                  <SectionTitle title={t('practices.expectedOutcome')} />
-                  <Text style={styles.text}>{item.expectedOutcome}</Text>
-
-                  <View style={styles.footer}>
-                    <Text style={styles.footerText}>{t('practices.footerHint')}</Text>
-                    <Pressable
-                      onPress={() => activeProfile && togglePracticeSaved(activeProfile.id, item.id)}
-                      style={[styles.saveButton, saved && styles.saveButtonActive]}>
-                      <Text style={styles.saveButtonText}>{saved ? t('common.saved') : t('common.save')}</Text>
-                    </Pressable>
-                  </View>
-                </Card>
-              );
-            })
-          )}
+                      <SectionTitle title="Kroki" />
+                      {item.steps.map((step, index) => (
+                        <Text key={`${item.id}-${index}`} style={styles.text}>{`${index + 1}. ${step}`}</Text>
+                      ))}
+                      <SectionTitle title="Oczekiwany efekt" />
+                      <Text style={styles.text}>{item.expectedOutcome}</Text>
+                    </Card>
+                  ))
+                )}
+              </View>
+            );
+          })}
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -190,6 +151,9 @@ const styles = StyleSheet.create({
   container: {
     gap: spacing.lg,
   },
+  categoryStack: {
+    gap: spacing.md,
+  },
   centered: {
     flex: 1,
     justifyContent: 'center',
@@ -200,6 +164,11 @@ const styles = StyleSheet.create({
     color: colors.textPrimary,
     fontSize: typography.titleMd,
     fontWeight: '700',
+  },
+  text: {
+    color: colors.textSecondary,
+    fontSize: typography.bodySm,
+    lineHeight: 22,
   },
   filters: {
     flexDirection: 'row',
@@ -225,77 +194,5 @@ const styles = StyleSheet.create({
   },
   filterTextActive: {
     color: colors.textPrimary,
-  },
-  savedHint: {
-    color: colors.textMuted,
-    fontSize: typography.bodySm,
-    lineHeight: 20,
-  },
-  textMuted: {
-    color: colors.textMuted,
-    fontSize: typography.bodySm,
-    lineHeight: 20,
-  },
-  dailyFooter: {
-    marginTop: spacing.sm,
-    alignItems: 'flex-start',
-  },
-  dailyButton: {
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: radius.sm,
-    paddingHorizontal: spacing.sm,
-    paddingVertical: spacing.xs,
-    backgroundColor: colors.bgSoft,
-  },
-  dailyButtonText: {
-    color: colors.textPrimary,
-    fontSize: typography.caption,
-    fontWeight: '700',
-  },
-  footer: {
-    marginTop: spacing.sm,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: spacing.sm,
-  },
-  footerText: {
-    color: colors.textMuted,
-    fontSize: typography.caption,
-    flex: 1,
-  },
-  saveButton: {
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: radius.sm,
-    paddingHorizontal: spacing.sm,
-    paddingVertical: spacing.xs,
-    backgroundColor: colors.bgSoft,
-    alignItems: 'center',
-    justifyContent: 'center',
-    minWidth: 72,
-  },
-  saveButtonActive: {
-    borderColor: colors.accentStrong,
-  },
-  saveButtonText: {
-    color: colors.textPrimary,
-    fontSize: typography.caption,
-    fontWeight: '700',
-  },
-  text: {
-    color: colors.textSecondary,
-    fontSize: typography.bodySm,
-    lineHeight: 22,
-  },
-  cardHeader: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'space-between',
-    gap: spacing.sm,
-  },
-  cardHeaderTextWrap: {
-    flex: 1,
   },
 });

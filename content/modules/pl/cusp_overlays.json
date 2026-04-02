@@ -1,0 +1,24 @@
+{
+  "cusp": {
+    "thresholdDeg": 2,
+    "shared": [
+      "Nacisk cusp oznacza strefe przejsciowa: lacz jasnosc kierunku z elastycznoscia."
+    ],
+    "byRole": {
+      "sun": [
+        "S?o?ce blisko cusp mo?e przechodzic mi?dzy dwoma stylami ekspresji, zanim utrwali kierunek."
+      ],
+      "moon": [
+        "Ksi??yc blisko cusp czesto potrzebuje dokladniejszego nazwania emocji i potrzeb."
+      ],
+      "asc": [
+        "Ascendent blisko cusp mo?e zmieniac styl pierwszego kontaktu zaleznie od kontekstu."
+      ]
+    }
+  },
+  "nonCusp": {
+    "shared": [
+      "Ta pozycja jest poza cusp i zwykle wyraza si? bardziej stabilnie."
+    ]
+  }
+}

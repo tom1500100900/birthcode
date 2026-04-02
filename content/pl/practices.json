@@ -1,0 +1,40 @@
+{
+  "library": [
+    {
+      "id": "practice_two_minute_reset",
+      "title": "2-minutowy reset",
+      "shortSummary": "Krótka interwencja, która zatrzymuje eskalację i przywraca wybór.",
+      "rationale": "Pod presją ciało reaguje szybciej niż myśl. Ta praktyka tworzy małą przerwę między wyzwalaczem a reakcją — a w tej przerwie mieści się autonomia.",
+      "durationMinutes": 2,
+      "steps": [
+        "Nazwij moment wyzwalacza jednym krótkim zdaniem.",
+        "Wydłuż wydech względem wdechu przez 6–8 oddechów.",
+        "Rozluźnij szczękę i barki; poczuj stopy.",
+        "Wybierz jedną odpowiedź: granica, pytanie albo krótka przerwa."
+      ],
+      "difficulty": "easy",
+      "reflectionAfter": [
+        "Co zmieniło się w moim ciele po 2 minutach?",
+        "Jaką odpowiedź wybrałem, której nie wybrałbym na autopilocie?"
+      ]
+    },
+    {
+      "id": "practice_clean_request",
+      "title": "Czysta prośba (jedno zdanie)",
+      "shortSummary": "Zamień aluzje i nacisk na jasną, szanującą prośbę.",
+      "rationale": "Wiele konfliktów eskaluje, bo potrzeby są komunikowane pośrednio. Czysta prośba wspiera relację bez rezygnacji z granic.",
+      "durationMinutes": 5,
+      "steps": [
+        "Nazwij, czego potrzebujesz (nie co ktoś zrobił źle).",
+        "Zrób jedną konkretną prośbę, na którą da się odpowiedzieć tak/nie.",
+        "Dodaj jedno zdanie kontekstu (dlaczego to ważne).",
+        "Zatrzymaj się i pozwól drugiej osobie odpowiedzieć."
+      ],
+      "difficulty": "medium",
+      "reflectionAfter": [
+        "Czy prosiłem o potrzebę, czy o naprawienie historii w mojej głowie?",
+        "Co się stało, gdy przestałem tłumaczyć się ponad miarę?"
+      ]
+    }
+  ]
+}

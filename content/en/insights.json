@@ -1,0 +1,28 @@
+{
+  "library": [
+    {
+      "id": "insight_regulation_loop",
+      "title": "Your Regulation Loop",
+      "shortSummary": "Map trigger → automatic response → cost, then choose one better move.",
+      "longDescription": "When stress rises, most people don’t consciously choose their behavior — they default to it. This insight helps you map your personal loop in a CBT-lite way: trigger → automatic response → cost → alternative response → recovery move. The point isn’t to judge your reaction; it’s to notice it early enough to interrupt it. Over time, this builds competence: you become someone who can handle pressure without escalation or collapse. It also supports relatedness: you can stay connected in conflict without outsourcing regulation to the other person. Use this when you notice repeating arguments, avoidance, procrastination, or emotional spikes.",
+      "questions": [
+        "What is the most common trigger that flips me into automatic mode?",
+        "What is my default response (fight, flee, freeze, please, control, explain)?",
+        "What is the real cost of that response — for me and for others?"
+      ],
+      "experiment": "Next time you notice the trigger, pause for 10 seconds and choose one alternative response (one sentence, one boundary, or one break). Then do one recovery move (2 minutes)."
+    },
+    {
+      "id": "insight_autonomy_competence_relatedness",
+      "title": "Needs Check: Autonomy, Competence, Relatedness",
+      "shortSummary": "Stress often spikes when one core need has been underfed for too long.",
+      "longDescription": "Self-Determination Theory says we function best when three needs are supported: autonomy (choice and agency), competence (effective progress), and relatedness (safe connection). When one need is chronically depleted, we often compensate — overworking to feel competent, people-pleasing to feel connected, or resisting everything to regain autonomy. This insight helps you identify which need is asking for attention today. It’s not about blaming others; it’s about naming the lever you can actually move. That alone often lowers tension and increases clarity.",
+      "questions": [
+        "Which need feels most deprived right now: autonomy, competence, or relatedness?",
+        "How am I compensating — and what is the hidden cost?",
+        "What is one small action that supports this need without harming the other two?"
+      ],
+      "experiment": "Choose one micro-action that feeds the missing need today (10–20 minutes). Keep it small enough to repeat."
+    }
+  ]
+}

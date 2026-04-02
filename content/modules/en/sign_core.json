@@ -1,0 +1,720 @@
+{
+  "version": "1.0",
+  "type": "sign_core",
+  "signs": {
+    "aries": {
+      "id": "sign.aries",
+      "name": "Aries",
+      "element": "fire",
+      "modality": "cardinal",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "The core of Aries is initiation. This is energy that wants to move before everything is perfectly analyzed.",
+            "Motivation centers on agency — the experience of being able to act, influence direction, and generate momentum."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "The deeper fear revolves around powerlessness or stagnation.",
+            "Long waiting periods or excessive constraint can generate frustration and inner pressure."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "At its best, Aries brings courage, directness, and the ability to break inertia.",
+            "It pushes forward when others hesitate."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Under stress, this energy can become reactive, impatient, or overly confrontational.",
+            "Action may precede reflection."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Psychologically, autonomy and movement are essential regulators.",
+            "Restriction quickly translates into tension."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typical loop: trigger → immediate action → short relief → later reconsideration.",
+            "Growth involves inserting a pause between impulse and execution."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "In relationships, Aries values honesty and momentum.",
+            "Difficulty may arise when others operate at a slower pace."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Professionally, Aries thrives in environments that reward initiative and decisiveness.",
+            "Excessive bureaucracy drains motivation."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Initiative", "Courage", "Momentum"],
+        "risks": ["Impulsiveness", "Impatience", "Reactivity"],
+        "recommendations": [
+          "Introduce a pause before major decisions",
+          "Schedule recovery after intense effort"
+        ]
+      }
+    },
+
+    "taurus": {
+      "id": "sign.taurus",
+      "name": "Taurus",
+      "element": "earth",
+      "modality": "fixed",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "The core of Taurus is stability and sustainable growth.",
+            "Motivation centers on building something tangible and secure."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear often relates to instability or forced change.",
+            "Sudden unpredictability can feel threatening."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "At its best, Taurus brings patience, reliability, and long-term focus.",
+            "It sustains direction when others lose endurance."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Under pressure, this energy may become rigid or resistant.",
+            "Change can feel unsafe even when necessary."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Security and predictability are key psychological stabilizers.",
+            "Clear structure enhances confidence."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: perceived threat → resistance → holding position → temporary relief.",
+            "Growth involves controlled and gradual change."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "In relationships, Taurus offers loyalty and steadiness.",
+            "Flexibility requires conscious effort."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Professionally, Taurus excels in stable and long-term systems.",
+            "Frequent shifts reduce efficiency."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Persistence", "Stability", "Practicality"],
+        "risks": ["Stubbornness", "Over-attachment to comfort"],
+        "recommendations": [
+          "Introduce small controlled experiments",
+          "Define what 'enough' means before over-refining"
+        ]
+      }
+    },
+
+    "gemini": {
+      "id": "sign.gemini",
+      "name": "Gemini",
+      "element": "air",
+      "modality": "mutable",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "The core of Gemini is curiosity and exchange.",
+            "Motivation arises from dialogue, learning, and perspective."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear may involve stagnation or lack of stimulation.",
+            "Monotony weakens engagement."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "At its best, Gemini brings adaptability and communication skill.",
+            "It connects ideas fluidly."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Under stress, attention may fragment.",
+            "Too many options can delay decisions."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Intellectual stimulation regulates energy.",
+            "Conversation restores clarity."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: information overload → analysis → more options → delay.",
+            "Growth involves setting decision limits."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Relationships thrive on communication and shared ideas.",
+            "Depth requires intentional slowing."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Gemini excels in dynamic environments.",
+            "Rigid repetition reduces motivation."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Adaptability", "Communication", "Learning speed"],
+        "risks": ["Scattered focus", "Indecision"],
+        "recommendations": [
+          "Set time boundaries for analysis",
+          "Limit parallel commitments"
+        ]
+      }
+    },
+
+    "cancer": {
+      "id": "sign.cancer",
+      "name": "Cancer",
+      "element": "water",
+      "modality": "cardinal",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Cancer’s core revolves around emotional safety and belonging.",
+            "Motivation comes from building meaningful bonds."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear centers on rejection or emotional instability.",
+            "Relational uncertainty can trigger strong reactions."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "At its best, Cancer brings empathy and protective care.",
+            "It creates safe emotional environments."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Under stress, withdrawal or indirect expression may occur.",
+            "Needs may be felt strongly but expressed cautiously."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Belonging and emotional validation regulate well-being."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: perceived relational threat → withdrawal → internal narrative building → increased tension."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Loyal and emotionally invested.",
+            "May over-assume responsibility for others’ feelings."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Thrives in collaborative and emotionally intelligent environments."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Empathy", "Loyalty", "Emotional depth"],
+        "risks": ["Over-sensitivity", "Withdrawal"],
+        "recommendations": [
+          "Communicate needs directly",
+          "Set emotional boundaries"
+        ]
+      }
+    },
+
+    "leo": {
+      "id": "sign.leo",
+      "name": "Leo",
+      "element": "fire",
+      "modality": "fixed",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Leo’s core is authentic self-expression.",
+            "Motivation comes from being seen and recognized."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear centers on invisibility or lack of appreciation."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "At its best, Leo brings generosity and inspiration."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Under stress, attention-seeking or over-identification with praise may appear."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Recognition and creative expression stabilize identity."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: lack of acknowledgment → intensity increase → reaction seeking."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Warm and loyal, but sensitive to perceived disregard."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Thrives in roles allowing visibility and creativity."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Charisma", "Creativity", "Inspiration"],
+        "risks": ["Approval-seeking", "Dramatization"],
+        "recommendations": [
+          "Build intrinsic validation",
+          "Separate expression from applause"
+        ]
+      }
+    },
+
+    "virgo": {
+      "id": "sign.virgo",
+      "name": "Virgo",
+      "element": "earth",
+      "modality": "mutable",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Virgo’s core revolves around refinement and improvement.",
+            "Motivation centers on competence and usefulness."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear may involve making mistakes or being inadequate."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "At its best, Virgo brings precision and responsibility."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Under stress, perfectionism and excessive self-criticism may surface."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Clear contribution and competence regulate self-worth."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: noticing flaw → analysis → over-correction → exhaustion."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Shows care through practical help."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Excels in detail-oriented environments."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Precision", "Reliability", "Analysis"],
+        "risks": ["Perfectionism", "Over-criticism"],
+        "recommendations": [
+          "Define completion thresholds",
+          "Practice delegation"
+        ]
+      }
+    },
+
+    "libra": {
+      "id": "sign.libra",
+      "name": "Libra",
+      "element": "air",
+      "modality": "cardinal",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Libra’s core is balance and relational harmony."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear involves conflict or injustice."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "Brings diplomacy and perspective."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "May avoid decisions to prevent tension."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Fair exchange regulates emotional stability."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: tension → over-analysis → delay."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Values mutual respect and cooperation."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Thrives in collaborative settings."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Diplomacy", "Perspective"],
+        "risks": ["Indecision"],
+        "recommendations": [
+          "Set time limits for decisions",
+          "Clarify boundaries"
+        ]
+      }
+    },
+
+    "scorpio": {
+      "id": "sign.scorpio",
+      "name": "Scorpio",
+      "element": "water",
+      "modality": "fixed",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Scorpio’s core is intensity and psychological truth."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear involves betrayal or loss of control."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "Brings depth and resilience."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "May become controlling or suspicious under pressure."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Trust regulates emotional safety."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: perceived threat → analysis → control."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Intense and loyal."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Thrives in strategic roles."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Depth", "Resilience"],
+        "risks": ["Control", "Suspicion"],
+        "recommendations": [
+          "Practice transparency",
+          "Communicate directly"
+        ]
+      }
+    },
+
+    "sagittarius": {
+      "id": "sign.sagittarius",
+      "name": "Sagittarius",
+      "element": "fire",
+      "modality": "mutable",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Sagittarius seeks meaning and expansion."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear involves restriction or loss of freedom."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "Brings optimism and vision."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "May avoid details or commitments."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Autonomy and growth regulate energy."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: boredom → new pursuit → unfinished cycle."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Seeks shared exploration."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Thrives where learning and expansion are present."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Vision", "Optimism"],
+        "risks": ["Lack of follow-through"],
+        "recommendations": [
+          "Translate vision into steps",
+          "Finish before starting new ventures"
+        ]
+      }
+    },
+
+    "capricorn": {
+      "id": "sign.capricorn",
+      "name": "Capricorn",
+      "element": "earth",
+      "modality": "cardinal",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Capricorn seeks structure and achievement."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear involves failure or inadequacy."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "Brings discipline and long-term focus."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "May overwork or suppress vulnerability."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Competence regulates confidence."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: pressure → more effort → exhaustion."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Reliable but reserved."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Excels in structured leadership."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Responsibility", "Discipline"],
+        "risks": ["Burnout"],
+        "recommendations": [
+          "Schedule recovery",
+          "Delegate intentionally"
+        ]
+      }
+    },
+
+    "aquarius": {
+      "id": "sign.aquarius",
+      "name": "Aquarius",
+      "element": "air",
+      "modality": "fixed",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Aquarius seeks independence and innovation."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear involves loss of autonomy."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "Brings originality and systemic thinking."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "May detach emotionally."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Autonomy regulates engagement."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: pressure → detachment."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Values equality and space."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Thrives in innovation-driven contexts."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Innovation", "Perspective"],
+        "risks": ["Isolation"],
+        "recommendations": [
+          "Stay emotionally connected",
+          "Balance independence with collaboration"
+        ]
+      }
+    },
+
+    "pisces": {
+      "id": "sign.pisces",
+      "name": "Pisces",
+      "element": "water",
+      "modality": "mutable",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Pisces seeks emotional meaning and connection."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "Fear involves disillusionment or emotional overwhelm."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "Brings empathy and imagination."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "May avoid reality under stress."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Emotional safety regulates stability."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Loop: overwhelm → withdrawal."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "Deeply compassionate."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "Thrives in meaningful, creative roles."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": ["Empathy", "Creativity"],
+        "risks": ["Blurred boundaries"],
+        "recommendations": [
+          "Set clear boundaries",
+          "Ground vision in small steps"
+        ]
+      }
+    }
+  }
+}

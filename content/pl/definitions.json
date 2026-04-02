@@ -1,0 +1,61 @@
+{
+  "screen": {
+    "title": "Definicje",
+    "subtitle": "Przewodnik po pojęciach używanych w Birthcode."
+  },
+  "intro": {
+    "title": "Jak to czytać",
+    "body": "Traktuj te definicje jak legendę do mapy: pomagają czytać profil bez technicznego szumu. Celem jest refleksja i lepsze decyzje — nie przewidywanie przyszłości. Jeśli jakieś pojęcie brzmi zbyt fachowo, potraktuj je jako nazwę wzorca, nie jako ocenę Ciebie."
+  },
+  "what_is_birthcode": {
+    "title": "Czym jest Birthcode?",
+    "body": "Birthcode tłumaczy wzorce z wykresu na praktyczną refleksję: daje język do nazywania potrzeb, reakcji na stres i mocnych stron — oraz małe praktyki, które da się zastosować na co dzień."
+  },
+  "big_three": {
+    "title": "Wielka Trójka",
+    "body": "Wielka Trójka to praktyczny punkt startu: Słońce (tożsamość i kierunek), Księżyc (potrzeby emocjonalne i regulacja) oraz Ascendent (styl pierwszego kontaktu — to, jak wchodzisz w nowe sytuacje).",
+    "sun": "Słońce: tożsamość, kierunek i to, co ma sens budować.",
+    "moon": "Księżyc: potrzeby emocjonalne, wzorce regulacji i regeneracja.",
+    "ascendant": "Ascendent: pierwsze wrażenie i domyślny sposób rozpoczynania."
+  },
+  "degrees": {
+    "title": "Stopnie",
+    "body": "Każdy znak ma zakres 0°–29°. Stopnie pokazują, gdzie dokładnie w znaku znajduje się pozycja. Dla prostoty używamy: wczesne (0–9°), środkowe (10–19°) i późne (20–29°). To detal doprecyzowujący, ale nie jest konieczny do zrozumienia profilu bazowego."
+  },
+  "planets": {
+    "title": "Planety",
+    "body": "Planety opisują funkcje psychologiczne: napęd, więź, komunikację, koncentrację, ambicję. Znak planety pokazuje styl działania tej funkcji."
+  },
+  "aspects": {
+    "title": "Aspekty",
+    "body": "Aspekty mówią o tym, jak dwie funkcje ze sobą współpracują. Część układów jest płynna i wspierająca, a część tworzy napięcie. Napięcie nie jest „złe” — często wskazuje miejsce rozwoju."
+  },
+  "orb": {
+    "title": "Orb",
+    "body": "Orb to odległość od idealnie dokładnego aspektu. Im mniejszy orb, tym silniej układ zwykle się odczuwa. Używamy tego, żeby ustalić priorytety: co jest najbardziej widoczne."
+  },
+  "dominants": {
+    "title": "Dominanty",
+    "body": "Dominanty streszczają ogólny ton profilu. Żywioł opisuje styl energii, a modalność — sposób działania w zmianie. To szybka mapa, nie sztywna etykieta."
+  },
+  "elements_modalities": {
+    "title": "Żywioły i modalności",
+    "body": "Żywioły opisują styl energii (Ogień/Ziemia/Powietrze/Woda). Modalności opisują sposób działania w zmianie (Kardynalna/Stała/Zmienna)."
+  },
+  "insights": {
+    "title": "Wglądy",
+    "body": "Wglądy to pytania i obserwacje oparte na stabilnych wzorcach. Pomagają nazywać wyzwalacze, potrzeby i wybory bez patologizowania."
+  },
+  "practices": {
+    "title": "Praktyki",
+    "body": "Praktyki to krótkie, powtarzalne ćwiczenia. Zamieniają profil w zachowanie: większą klarowność, lepszą regulację i zdrowsze relacje."
+  },
+  "saved": {
+    "title": "Zapisane",
+    "body": "Zapisuj wglądy i praktyki, żeby móc łatwo do nich wracać."
+  },
+  "disclaimer": {
+    "title": "Uwaga",
+    "body": "Treść ma charakter edukacyjny i refleksyjny — nie stanowi porady medycznej ani psychologicznej."
+  }
+}

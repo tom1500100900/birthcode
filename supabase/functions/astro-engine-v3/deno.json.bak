@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "jsr:@fusionstrings/swiss-eph": "jsr:@fusionstrings/swiss-eph@0.2.0",
+    "npm:luxon": "npm:luxon@3.6.1",
+    "https://jsr.io/swiss_eph.wasm": "./vendor/swiss_eph.wasm",
+    "https://jsr.io/@fusionstrings/swiss-eph/0.2.0/lib/wasm/swiss_eph.wasm": "./vendor/swiss_eph.wasm",
+    "https://jsr.io/@fusionstrings/swiss-eph/0.2.1/lib/wasm/swiss_eph.wasm": "./vendor/swiss_eph.wasm"
+  }
+}

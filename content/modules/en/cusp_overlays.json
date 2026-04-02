@@ -1,0 +1,24 @@
+{
+  "cusp": {
+    "thresholdDeg": 2,
+    "shared": [
+      "Cusp emphasis suggests a transition zone: hold both clarity and flexibility."
+    ],
+    "byRole": {
+      "sun": [
+        "Sun near cusp can alternate between two expression styles before stabilizing intent."
+      ],
+      "moon": [
+        "Moon near cusp may need extra naming precision to avoid mixed emotional signals."
+      ],
+      "asc": [
+        "Ascendant near cusp can shift first-impression style across contexts."
+      ]
+    }
+  },
+  "nonCusp": {
+    "shared": [
+      "This placement sits away from cusp and tends to express more consistently."
+    ]
+  }
+}

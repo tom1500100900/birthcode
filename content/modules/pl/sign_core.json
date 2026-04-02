@@ -1,0 +1,786 @@
+{
+  "version": "1.0",
+  "type": "sign_core",
+  "signs": {
+    "aries": {
+      "id": "sign.aries",
+      "name": "Baran",
+      "element": "fire",
+      "modality": "cardinal",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Baran kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Baran mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Baran wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Baran mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Baran regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Baran pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Baran najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "taurus": {
+      "id": "sign.taurus",
+      "name": "Byk",
+      "element": "earth",
+      "modality": "fixed",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Byk kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Byk mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Byk wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Byk mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Byk regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Byk pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Byk najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "gemini": {
+      "id": "sign.gemini",
+      "name": "Bliznieta",
+      "element": "air",
+      "modality": "mutable",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Bliznieta kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Bliznieta mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Bliznieta wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Bliznieta mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Bliznieta regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Bliznieta pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Bliznieta najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "cancer": {
+      "id": "sign.cancer",
+      "name": "Rak",
+      "element": "water",
+      "modality": "cardinal",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Rak kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Rak mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Rak wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Rak mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Rak regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Rak pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Rak najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "leo": {
+      "id": "sign.leo",
+      "name": "Lew",
+      "element": "fire",
+      "modality": "fixed",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Lew kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Lew mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Lew wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Lew mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Lew regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Lew pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Lew najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "virgo": {
+      "id": "sign.virgo",
+      "name": "Panna",
+      "element": "earth",
+      "modality": "mutable",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Panna kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Panna mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Panna wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Panna mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Panna regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Panna pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Panna najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "libra": {
+      "id": "sign.libra",
+      "name": "Waga",
+      "element": "air",
+      "modality": "cardinal",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Waga kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Waga mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Waga wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Waga mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Waga regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Waga pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Waga najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "scorpio": {
+      "id": "sign.scorpio",
+      "name": "Skorpion",
+      "element": "water",
+      "modality": "fixed",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Skorpion kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Skorpion mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Skorpion wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Skorpion mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Skorpion regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Skorpion pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Skorpion najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "sagittarius": {
+      "id": "sign.sagittarius",
+      "name": "Strzelec",
+      "element": "fire",
+      "modality": "mutable",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Strzelec kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Strzelec mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Strzelec wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Strzelec mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Strzelec regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Strzelec pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Strzelec najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "capricorn": {
+      "id": "sign.capricorn",
+      "name": "Koziorozec",
+      "element": "earth",
+      "modality": "cardinal",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Koziorozec kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Koziorozec mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Koziorozec wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Koziorozec mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Koziorozec regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Koziorozec pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Koziorozec najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "aquarius": {
+      "id": "sign.aquarius",
+      "name": "Wodnik",
+      "element": "air",
+      "modality": "fixed",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Wodnik kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Wodnik mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Wodnik wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Wodnik mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Wodnik regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Wodnik pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Wodnik najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    },
+    "pisces": {
+      "id": "sign.pisces",
+      "name": "Ryby",
+      "element": "water",
+      "modality": "mutable",
+      "segments": {
+        "core_motive": {
+          "text": [
+            "Ryby kieruje energia ku temu, co daje sens i poczucie kierunku."
+          ]
+        },
+        "core_fear": {
+          "text": [
+            "W cieniu Ryby mo?e reagowac napieciem, gdy traci poczucie kontroli."
+          ]
+        },
+        "strength_expression": {
+          "text": [
+            "W sile Ryby wnosi wyrazny styl dzialania i konsekwencje."
+          ]
+        },
+        "shadow_expression": {
+          "text": [
+            "Pod presja Ryby mo?e wchodzic w automatyczne reakcje obronne."
+          ]
+        },
+        "needs_language": {
+          "text": [
+            "Dla Ryby regulujace jest nazwanie potrzeb i jasny kierunek."
+          ]
+        },
+        "cbt_loop_bias": {
+          "text": [
+            "Typowa petla: bodziec -> automatyczna reakcja -> koszt -> korekta."
+          ]
+        },
+        "relationship_pattern": {
+          "text": [
+            "W relacjach Ryby pokazuje sw?j styl przez tempo, granice i komunikacje."
+          ]
+        },
+        "work_pattern": {
+          "text": [
+            "W pracy Ryby najlepiej dziala przy czytelnych priorytetach i odpowiedzialnosci."
+          ]
+        }
+      },
+      "bullets": {
+        "strengths": [
+          "Sprawnosc adaptacji",
+          "Jasne komunikowanie priorytetu",
+          "Wytrwalosc w kluczowych sprawach"
+        ],
+        "risks": [
+          "Przeciazenie pod presja",
+          "Reaktywnosc w trudnych rozmowach",
+          "Spadek elastycznosci przy duzym stresie"
+        ],
+        "recommendations": [
+          "Nazwij priorytet dnia i domknij go przed kolejnym",
+          "Dodaj krotki rytual resetu po napieciu",
+          "Komunikuj granice wprost i wczesnie"
+        ]
+      }
+    }
+  }
+}

@@ -42,6 +42,51 @@ To learn more about developing your project with Expo, look at the following res
 - [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
 - [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
+## Birthcode QA Smoke Checklist
+
+Run this checklist before merging navigation/state changes:
+
+1. Launch app and verify Home renders without errors.
+2. Create first profile in onboarding and generate chart.
+3. Switch tabs: Profile -> Chart -> Insights -> Practices -> Saved.
+4. Open Profiles from header pill and switch active profile.
+5. Create second profile, generate, and switch back/forth.
+6. Save and unsave multiple insights/practices; confirm Saved updates.
+7. Open Definitions and return to tabs/home.
+8. Change language EN/PL from Home and Definitions; verify immediate UI update.
+9. Clear data from Settings and verify app returns to Home safely.
+
+Validation commands:
+
+```bash
+npx tsc --noEmit
+npm run lint
+```
+
+## Supabase/RLS Quick Checklist
+
+1. `EXPO_PUBLIC_SUPABASE_URL` i `EXPO_PUBLIC_SUPABASE_ANON_KEY` ustawione w `.env`.
+2. RLS dla `public.profiles` zgodne z aktualnym trybem aplikacji (u nas: `device_id` + nagłówek `x-device-id`).
+3. Przed testami uruchom: `npx expo start -c`.
+4. W trybie dev (`__DEV__`) w Settings użyj:
+   - `Test Supabase connection`
+   - `Insert debug profile row`
+   - `Load profiles from Supabase`
+5. Po insercie sprawdź `public.profiles` w Supabase Table Editor.
+
+## Astro Engine v1 (Backend Pipeline)
+
+1. Run SQL migration in Supabase SQL Editor:
+   - `supabase/migrations/20260220_astro_engine_v1.sql`
+2. Deploy edge function:
+   - `supabase functions deploy astro-engine-v1 --project-ref <your-project-ref>`
+3. Test in app:
+   - open Profile screen
+   - click `Generate chart` (first click -> computed)
+   - click `Refresh astro result` (second click -> cache)
+   - verify `public.astro_results` row with `engine_version = 'v1'`
+   - verify preview card shows `engine_version`, `source`, and `big_three`
+
 ## Join the community
 
 Join our community of developers creating universal apps.
