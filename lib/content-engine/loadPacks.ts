@@ -87,7 +87,7 @@ function buildForLang(lang: SupportedLang): LoadedPacks {
           const normalizedRole = role === 'sun' ? 'Sun' : role === 'moon' ? 'Moon' : 'Asc';
           return plZodiacRoleSnippet(sign, normalizedRole)?.text ?? fallbackText;
         },
-        segmentSnippet: (_role, segment) => plSegmentSnippet(segment)?.text ?? fallbackText,
+        segmentSnippet: (role, segment) => plSegmentSnippet(role, segment) ?? fallbackText,
       },
       practices: {
         list: PL_PRACTICES,
@@ -111,8 +111,11 @@ function buildForLang(lang: SupportedLang): LoadedPacks {
       sectionTemplates: EN_BIRTHCODE_SECTION_TEMPLATES as Record<SectionId, readonly string[]>,
       archetypeSignatures: EN_ARCHETYPE_SIGNATURES,
       tensionSnippets: EN_TENSION_SNIPPETS,
-      zodiacRoleSnippet: (sign, role) => enZodiacRoleSnippet() || `${role}:${sign}`,
-      segmentSnippet: enSegmentSnippet,
+      zodiacRoleSnippet: (sign, role) => {
+        const normalizedRole = role === 'sun' ? 'Sun' : role === 'moon' ? 'Moon' : 'Asc';
+        return enZodiacRoleSnippet(sign, normalizedRole)?.text ?? fallbackText;
+      },
+      segmentSnippet: (role, segment) => enSegmentSnippet(role, segment) ?? fallbackText,
     },
     practices: {
       list: EN_PRACTICES,

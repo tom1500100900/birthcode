@@ -1,19 +1,23 @@
+import type { SegmentKey } from '@/lib/content-engine/psychoNarrative';
 
-export const segments = {
-  early: {
-    id: "seg_early",
-    text: "Wczesny segment znaku oznacza energię inicjowania – częściej zaczynasz nowe rzeczy niż je kończysz."
-  },
-  mid: {
-    id: "seg_mid",
-    text: "Środkowy segment znaku daje stabilność i równowagę między impulsem a refleksją."
-  },
-  late: {
-    id: "seg_late",
-    text: "Późny segment znaku daje dojrzałość i zdolność integrowania doświadczeń."
-  }
-}
+export function segmentSnippet(role: 'sun' | 'moon' | 'asc', segment: SegmentKey): string {
+  const map: Record<'sun' | 'moon' | 'asc', Record<SegmentKey, string>> = {
+    sun: {
+      early: 'Start jest szybki, nastawiony na prototypowanie i budowanie tempa.',
+      mid: 'Tempo jest zrównoważone, sekwencyjne i nastawione na stabilne wykonanie.',
+      late: 'Domykanie idzie przez konsolidację, głębię i integrację doświadczeń.',
+    },
+    moon: {
+      early: 'Sygnały emocjonalne są wychwytywane szybko i przetwarzane bezpośrednio.',
+      mid: 'Sygnały emocjonalne są integrowane krok po kroku z refleksją.',
+      late: 'Sygnały emocjonalne są najpierw pogłębiane, a dopiero potem wyrażane.',
+    },
+    asc: {
+      early: 'Styl wejścia jest bezpośredni, dynamiczny i zorientowany na tempo.',
+      mid: 'Styl wejścia jest wyważony, kontekstowy i kalibrowany.',
+      late: 'Styl wejścia jest selektywny, intencjonalny i strategiczny.',
+    },
+  };
 
-export function segmentSnippet(segmentKey: 'early' | 'mid' | 'late'): { id: string; text: string } | null {
-  return segments[segmentKey] ?? null;
+  return map[role]?.[segment] ?? 'Tresc w przygotowaniu.';
 }
