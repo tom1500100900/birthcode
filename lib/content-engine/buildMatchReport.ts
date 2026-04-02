@@ -24,26 +24,57 @@ export function buildMatchReport(input: {
   const pairLabel = input.pairLabel
     ?? `${zodiacLabel(input.profileA.sun.sign, input.lang)} + ${zodiacLabel(input.profileB.sun.sign, input.lang)}`;
 
+  const n = packs.match.narrative;
+
+  // Build sections — gracefully skip optional sections if not present in pack
+  const sections: MatchReport['sections'] = [
+    {
+      id: 'overall',
+      title: n.overallTitle,
+      paragraphs: [replaceTokens(n.overallBody)],
+    },
+    {
+      id: 'dynamic',
+      title: n.dynamicTitle,
+      paragraphs: [replaceTokens(n.dynamicBody)],
+    },
+  ];
+
+  // Optional premium sections (strengths, risks, mitigation)
+  if ('strengthsTitle' in n && 'strengthsBody' in n) {
+    sections.push({
+      id: 'strengths',
+      title: (n as { strengthsTitle: string }).strengthsTitle,
+      paragraphs: [replaceTokens((n as { strengthsBody: string }).strengthsBody)],
+    });
+  }
+
+  if ('risksTitle' in n && 'risksBody' in n) {
+    sections.push({
+      id: 'risks',
+      title: (n as { risksTitle: string }).risksTitle,
+      paragraphs: [replaceTokens((n as { risksBody: string }).risksBody)],
+    });
+  }
+
+  if ('mitigationTitle' in n && 'mitigationBody' in n) {
+    sections.push({
+      id: 'mitigation',
+      title: (n as { mitigationTitle: string }).mitigationTitle,
+      paragraphs: [replaceTokens((n as { mitigationBody: string }).mitigationBody)],
+    });
+  }
+
+  sections.push({
+    id: 'growth',
+    title: n.growthTitle,
+    paragraphs: [replaceTokens(n.growthBody)],
+  });
+
   return {
     pairLabel,
     score100: input.matchScore,
     breakdown: input.breakdownMeta,
-    sections: [
-      {
-        id: 'overall',
-        title: packs.match.narrative.overallTitle,
-        paragraphs: [replaceTokens(packs.match.narrative.overallBody)],
-      },
-      {
-        id: 'dynamic',
-        title: packs.match.narrative.dynamicTitle,
-        paragraphs: [replaceTokens(packs.match.narrative.dynamicBody)],
-      },
-      {
-        id: 'growth',
-        title: packs.match.narrative.growthTitle,
-        paragraphs: [replaceTokens(packs.match.narrative.growthBody)],
-      },
-    ],
+    sections,
   };
 }

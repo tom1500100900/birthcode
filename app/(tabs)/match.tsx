@@ -6,9 +6,11 @@ import Card from '@/components/Card';
 import CollapsibleCard from '@/components/CollapsibleCard';
 import SectionTitle from '@/components/SectionTitle';
 import { buildMatchReport } from '@/lib/content-engine/buildMatchReport';
-import { toChartDataSwiss } from '@/lib/content-engine/chartAdapters';
+import { toChartDataSwiss, toNormalizedAstroV2FromChart } from '@/lib/content-engine/chartAdapters';
+import { buildBirthcodeSignals } from '@/lib/content-engine/psychoNarrative';
 import { scoreMatch } from '@/lib/match-engine/scoreMatch';
 import { useLocale } from '@/lib/i18n/useLocale';
+import { useLocaleStore } from '@/store/useLocaleStore';
 import { ButtonPrimary } from '@/src/components';
 import { colors } from '@/src/theme/colors';
 import { radius } from '@/src/theme/radius';
@@ -78,13 +80,20 @@ export default function MatchTab() {
         throw new Error('Nie udało się przygotować danych astro dla obu profili.');
       }
 
+      // Derive BirthcodeSignals for signal-enhanced scoring
+      const signalsA = buildBirthcodeSignals(toNormalizedAstroV2FromChart(aReady.astroResult.chart));
+      const signalsB = buildBirthcodeSignals(toNormalizedAstroV2FromChart(bReady.astroResult.chart));
+
+      const currentLang = useLocaleStore.getState().language;
       const score = scoreMatch({
-        lang: 'pl',
+        lang: currentLang,
         profileA: toChartDataSwiss(aReady.astroResult.chart),
         profileB: toChartDataSwiss(bReady.astroResult.chart),
+        signalsA,
+        signalsB,
       });
       const report = buildMatchReport({
-        lang: 'pl',
+        lang: currentLang,
         profileA: toChartDataSwiss(aReady.astroResult.chart),
         profileB: toChartDataSwiss(bReady.astroResult.chart),
         matchScore: score.score100,

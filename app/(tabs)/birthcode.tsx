@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
     padding: spacing.md,
     borderRadius: 12,
-    backgroundColor: colors.surface,
+    backgroundColor: colors.card,
   },
   sectionTitle: {
     color: colors.textPrimary,

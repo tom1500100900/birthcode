@@ -1,37 +1,23 @@
-
-export const matchBands = [
-  {
-    id: "m_band_low",
-    range: [0,39],
-    summary: "Ta relacja może wymagać dużo pracy i zrozumienia różnic."
-  },
-
-  {
-    id: "m_band_mid",
-    range: [40,74],
-    summary: "Między Wami istnieje potencjał, ale wymaga on świadomej komunikacji."
-  },
-
-  {
-    id: "m_band_high",
-    range: [75,100],
-    summary: "Wasze energie naturalnie się uzupełniają i możecie się wzajemnie wzmacniać."
-  }
-]
-
-const lowSummary = matchBands.find((item) => item.id === 'm_band_low')?.summary ?? 'Tresc w przygotowaniu.';
-const midSummary = matchBands.find((item) => item.id === 'm_band_mid')?.summary ?? 'Tresc w przygotowaniu.';
-const highSummary = matchBands.find((item) => item.id === 'm_band_high')?.summary ?? 'Tresc w przygotowaniu.';
+// PL Match Scoring Content Pack
 
 export const PL_MATCH_BREAKDOWN_LABELS = {
-  sun_sun: 'Słońce ↔ Słońce',
-  moon_moon: 'Księżyc ↔ Księżyc',
-  moon_sun: 'Księżyc ↔ Słońce',
-  asc_asc: 'Asc ↔ Asc',
-};
+  sun_sun: 'Słońce ↔ Słońce (Tożsamość)',
+  moon_moon: 'Księżyc ↔ Księżyc (Świat emocjonalny)',
+  moon_sun: 'Księżyc ↔ Słońce (Głębia emocjonalna)',
+  asc_asc: 'Asc ↔ Asc (Interfejs społeczny)',
+} as const;
 
 export const PL_MATCH_REASON_TEMPLATES = {
-  low: lowSummary,
-  medium: midSummary,
-  strong: highSummary,
-};
+  strong:
+    `Silny rezonans. Wasze wzorce na tej osi są naturalnie wyrównane — ` +
+    `dzielicie podobny instynkt działania w tym obszarze. ` +
+    `To tworzy łatwość i zmniejsza potrzebę ciągłego tłumaczenia.`,
+  medium:
+    `Umiarkowana kompatybilność. Jest wystarczająco dużo części wspólnych, żeby tworzyć połączenie, ` +
+    `ale również wystarczająco dużo różnic, żeby wymagać tłumaczenia. ` +
+    `Ta oś będzie płynna w dobrych warunkach i wymagająca pod presją.`,
+  low:
+    `Znacząca różnica. Wasze domyślne wzorce na tej osi się rozchodzą. ` +
+    `To nie jest dyskwalifikacja — to miejsce, które wymaga świadomej komunikacji. ` +
+    `Nazwijcie różnicę wcześnie. Zbudujcie wspólny protokół, zanim tarcie się nagromadzi.`,
+} as const;

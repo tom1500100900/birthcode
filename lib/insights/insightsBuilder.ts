@@ -1,17 +1,51 @@
-import { AstroChart, AstroProfile, InsightItem, ProfileContext } from '@/types/astro';
-import { AppLocale } from '@/store/useLocaleStore';
+import type { AstroChart, AstroProfile, InsightItem, ProfileContext } from '@/types/astro';
+import type { AppLocale } from '@/store/useLocaleStore';
+import type { BirthcodeSignals, MetricKey } from '@/lib/content-engine/psychoNarrative';
+import { toNormalizedAstroV2FromChart } from '@/lib/content-engine/chartAdapters';
+import { buildBirthcodeSignals } from '@/lib/content-engine/psychoNarrative';
 
-function elementTheme(element: AstroChart['dominantElement']): string {
-  if (element === 'Fire') return 'initiative and momentum';
-  if (element === 'Earth') return 'structure and reliability';
-  if (element === 'Air') return 'perspective and communication';
-  return 'emotional attunement and depth';
+// ─── Metric label helpers ────────────────────────────────────────────────────
+const METRIC_LABELS_EN: Record<MetricKey, string> = {
+  curiosity_openness: 'Curiosity & Openness',
+  analytical_order: 'Analytical Order',
+  emotional_sensitivity: 'Emotional Sensitivity',
+  intensity_depth: 'Intensity & Depth',
+  social_expression: 'Social Expression',
+  control_need: 'Need for Control',
+  adaptability: 'Adaptability',
+  persistence_drive: 'Persistence Drive',
+  risk_orientation: 'Risk Orientation',
+  connection_need: 'Need for Connection',
+};
+const METRIC_LABELS_PL: Record<MetricKey, string> = {
+  curiosity_openness: 'Ciekawość i otwartość',
+  analytical_order: 'Porządek analityczny',
+  emotional_sensitivity: 'Wrażliwość emocjonalna',
+  intensity_depth: 'Intensywność i głębia',
+  social_expression: 'Ekspresja społeczna',
+  control_need: 'Potrzeba kontroli',
+  adaptability: 'Adaptatywność',
+  persistence_drive: 'Napęd wytrwałości',
+  risk_orientation: 'Orientacja na ryzyko',
+  connection_need: 'Potrzeba bliskości',
+};
+
+function metricLabel(key: MetricKey, isPl: boolean): string {
+  return isPl ? METRIC_LABELS_PL[key] : METRIC_LABELS_EN[key];
 }
 
-function modalityTheme(modality: AstroChart['dominantModality']): string {
-  if (modality === 'Cardinal') return 'starting and leading';
-  if (modality === 'Fixed') return 'stabilizing and sustaining';
-  return 'adapting and integrating';
+function topMetrics(signals: BirthcodeSignals, count: number): MetricKey[] {
+  return (Object.entries(signals.metrics) as [MetricKey, number][])
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, count)
+    .map(([k]) => k);
+}
+
+function lowMetrics(signals: BirthcodeSignals, count: number): MetricKey[] {
+  return (Object.entries(signals.metrics) as [MetricKey, number][])
+    .sort((a, b) => a[1] - b[1])
+    .slice(0, count)
+    .map(([k]) => k);
 }
 
 export function buildInsights(
@@ -21,140 +55,212 @@ export function buildInsights(
   language: AppLocale = 'en'
 ): InsightItem[] {
   const isPl = language === 'pl';
-  const elementFocus = elementTheme(chart.dominantElement);
-  const modalityFocus = modalityTheme(chart.dominantModality);
-  const openness = profile.traits.find((item) => item.dimension === 'Openness');
-  const conscientiousness = profile.traits.find((item) => item.dimension === 'Conscientiousness');
-  const extraversion = profile.traits.find((item) => item.dimension === 'Extraversion');
-  const agreeableness = profile.traits.find((item) => item.dimension === 'Agreeableness');
-  const emotionalStability = profile.traits.find((item) => item.dimension === 'Emotional Stability');
+
+  // Derive BirthcodeSignals from the chart for signal-driven insights
+  let signals: BirthcodeSignals | null = null;
+  try {
+    const normalized = toNormalizedAstroV2FromChart(chart);
+    signals = buildBirthcodeSignals(normalized);
+  } catch {
+    signals = null;
+  }
+
+  const top3 = signals ? topMetrics(signals, 3) : [];
+  const low2 = signals ? lowMetrics(signals, 2) : [];
+  const primaryTension = signals?.tensions[0];
+  const archetype = signals?.archetype ?? 'Deep Strategist';
+  const sunSign = context.placements.sun.sign;
+  const moonSign = context.placements.moon.sign;
+  const ascSign = context.placements.asc.sign;
+
+  const top1Label = top3[0] ? metricLabel(top3[0], isPl) : (isPl ? 'Twoja główna siła' : 'your top strength');
+  const top2Label = top3[1] ? metricLabel(top3[1], isPl) : (isPl ? 'drugi wymiar' : 'second dimension');
+  const low1Label = low2[0] ? metricLabel(low2[0], isPl) : (isPl ? 'obszar do wzmocnienia' : 'area to strengthen');
+  const tensionLabel = primaryTension
+    ? (isPl
+        ? primaryTension.key.replace(/_/g, ' ').replace('vs', 'vs.')
+        : primaryTension.key.replace(/_/g, ' ').replace('vs', 'vs.'))
+    : (isPl ? 'główne napięcie' : 'primary tension');
+
+  // Suppress unused variable warnings for legacy params still needed by signature
+  void profile;
 
   return [
+    // ── IDENTITY 1 ───────────────────────────────────────────────────────────────────────
     {
       id: 'insight-identity-1',
       category: 'identity',
-      title: isPl ? 'Wybory tozsamosci i spojnosc wartosci' : 'Identity choices and values consistency',
+      title: isPl ? 'Twój wzorzec tożsamości' : 'Your identity pattern',
       whyItMatters: isPl
-        ? `Twoj wzorzec pokazuje, ze otwartosc i sumiennosc dzialaja najlepiej, gdy eksploracja przechodzi w decyzje. Przy dominancie ${elementFocus} i ${modalityFocus} tozsamosc wzmacnia sie, gdy wartosci staja sie widocznymi nawykami. Slonce w ${context.placements.sun.sign} dodaje stabilny kierunek.`
-        : `Your behavior suggests that openness and conscientiousness work best together when exploration is followed by commitment. With ${elementFocus} and ${modalityFocus} in your chart pattern, your identity feels strongest when values become visible habits instead of abstract intentions. Your Sun in ${context.placements.sun.sign} adds a consistent directional tone.`,
+        ? `Twój archetype to ${archetype}. Twoja najsilniejsza metryka — ${top1Label} — kształtuje to, jak budujesz poczucie siebie. Słońce w ${sunSign} nadaje temu kierunek. Kiedy działasz zgodnie z tym wzorcem, czujesz się spójny. Kiedy go ignorujesz, pojawia się tarcie.`
+        : `Your archetype is ${archetype}. Your strongest metric — ${top1Label} — shapes how you build your sense of self. Sun in ${sunSign} gives this a direction. When you act in alignment with this pattern, you feel coherent. When you ignore it, friction appears.`,
       questions: [
         isPl
-          ? `Gdzie Twoja ${openness?.growthPath ?? 'ciekawosc'} zaprasza do malego eksperymentu w tym tygodniu?`
-          : `Where is your ${openness?.growthPath ?? 'curiosity'} inviting a small experiment this week?`,
+          ? `Kiedy ostatnio działałeś w pełni zgodnie z ${top1Label}?`
+          : `When did you last act fully in alignment with ${top1Label}?`,
         isPl
-          ? 'Ktore codzienne zachowanie pokaze Twoje wartosci w praktyce?'
-          : 'Which daily behavior would make your values observable to someone else?',
+          ? 'Które decyzje z ostatniego tygodnia były naprawdę Twoje — a które były odpowiedzią na czyjejś oczekiwania?'
+          : 'Which decisions last week were truly yours — and which were responses to someone else\'s expectations?',
         isPl
-          ? 'Jakie jedno zobowiazanie ochronisz mimo zmian planu?'
-          : 'What one commitment will you protect even if plans change around it?',
+          ? 'Co możesz uprościć, żeby działać bardziej spójnie z tym, kim jesteś?'
+          : 'What can you simplify to act more consistently with who you are?',
       ],
       linkedDimensions: ['Openness', 'Conscientiousness'],
       motivationLens: 'autonomy',
     },
+    // ── IDENTITY 2 ───────────────────────────────────────────────────────────────────────
+    {
+      id: 'insight-identity-2',
+      category: 'identity',
+      title: isPl ? 'Napięcie jako kompas' : 'Tension as compass',
+      whyItMatters: isPl
+        ? `Twoje główne napięcie to ${tensionLabel}. To nie jest problem do rozwiązania — to informacja o tym, gdzie leży Twój wzrost. Kiedy to napięcie jest aktywne, masz wybór: zareagować automatycznie albo użyć go świadomie.`
+        : `Your primary tension is ${tensionLabel}. This is not a problem to solve — it's information about where your growth lives. When this tension is active, you have a choice: react automatically or use it deliberately.`,
+      questions: [
+        isPl
+          ? `Kiedy ostatnio poczułeś napięcie ${tensionLabel}? Co wtedy zrobiłeś?`
+          : `When did you last feel the ${tensionLabel} tension? What did you do with it?`,
+        isPl
+          ? 'Jak wyglądałoby Twoje życie, gdybyś to napięcie traktował jako sygnał, a nie jako problem?'
+          : 'What would your life look like if you treated this tension as a signal rather than a problem?',
+        isPl
+          ? 'Jedno konkretne działanie, które możesz zrobić dziś, żeby pracować z tym napięciem zamiast przeciwko niemu?'
+          : 'One concrete action you can take today to work with this tension instead of against it?',
+      ],
+      linkedDimensions: ['Openness', 'Emotional Stability'],
+      motivationLens: 'autonomy',
+    },
+    // ── CAREER 1 ────────────────────────────────────────────────────────────────────────
+    {
+      id: 'insight-career-1',
+      category: 'career',
+      title: isPl ? 'Twoja strefa najwyższej wartości' : 'Your highest-value zone',
+      whyItMatters: isPl
+        ? `Twoje dwie najsilniejsze metryki — ${top1Label} i ${top2Label} — to Twoja strefa najwyższej wartości zawodowej. Nie chodzi o to, żeby być dobry we wszystkim. Chodzi o to, żeby wiedzieć, gdzie Twoja praca jest jakościowo inna niż u innych.`
+        : `Your two strongest metrics — ${top1Label} and ${top2Label} — define your highest-value professional zone. It's not about being good at everything. It's about knowing where your work is qualitatively different from others.`,
+      questions: [
+        isPl
+          ? `Które zadania w tym tygodniu wymagają ${top1Label}? Czy masz na nie wystarczająco czasu?`
+          : `Which tasks this week require ${top1Label}? Do you have enough time allocated to them?`,
+        isPl
+          ? 'Co możesz oddelegować lub uprościć, żeby chronić czas na pracę w swojej strefie?'
+          : 'What can you delegate or simplify to protect time for work in your zone?',
+        isPl
+          ? 'Jak wygląda Twój najlepszy dzień pracy — konkretnie, godzina po godzinie?'
+          : 'What does your best work day look like — specifically, hour by hour?',
+      ],
+      linkedDimensions: ['Conscientiousness', 'Openness'],
+      motivationLens: 'competence',
+    },
+    // ── CAREER 2 ────────────────────────────────────────────────────────────────────────
+    {
+      id: 'insight-career-2',
+      category: 'career',
+      title: isPl ? 'Rytm decyzji i wykonania' : 'Decision and execution rhythm',
+      whyItMatters: isPl
+        ? `Ascendent w ${ascSign} kształtuje to, jak wchodzisz w nowe projekty i jak Cię widzą współpracownicy. Twój wzorzec decyzji jest mocny, gdy masz czas na przetworzenie informacji. Pod presją czasu jakość spada. To nie jest słabość — to jest informacja o tym, jak projektować swój rytm pracy.`
+        : `Ascendant in ${ascSign} shapes how you enter new projects and how colleagues perceive you. Your decision pattern is strong when you have time to process information. Under time pressure, quality drops. This is not a weakness — it's information about how to design your work rhythm.`,
+      questions: [
+        isPl
+          ? 'Które decyzje z ostatniego miesiąca były podjęte za szybko? Co byś zmienił?'
+          : 'Which decisions from last month were made too quickly? What would you change?',
+        isPl
+          ? 'Jak możesz zbudować bufor czasowy przed kolejną ważną decyzją?'
+          : 'How can you build a time buffer before your next important decision?',
+        isPl
+          ? 'Jedno narzędzie lub rytuał, który pomoże Ci utrzymać jakość decyzji pod presją?'
+          : 'One tool or ritual that would help you maintain decision quality under pressure?',
+      ],
+      linkedDimensions: ['Conscientiousness', 'Emotional Stability'],
+      motivationLens: 'competence',
+    },
+    // ── RELATIONSHIPS 1 ──────────────────────────────────────────────────────────────────
     {
       id: 'insight-relationships-1',
       category: 'relationships',
-      title: isPl ? 'Zaufanie w relacjach pod presja' : 'Relational trust under pressure',
+      title: isPl ? 'Jak budujesz zaufanie' : 'How you build trust',
       whyItMatters: isPl
-        ? 'Ugodowosc i stabilnosc emocjonalna mocno wplywaja na sposob reagowania na napiecie. Relacja wzmacnia sie, gdy laczysz klarownosc z empatia i nazywasz potrzeby, zanim narasta frustracja.'
-        : `Agreeableness and emotional stability often shape how you handle tension. You tend to preserve connection by staying constructive, but trust deepens most when clarity is paired with empathy and when needs are stated before frustration accumulates.`,
+        ? `Księżyc w ${moonSign} kształtuje to, jak regulujesz emocje w relacjach. Twoja metryka ${top1Label} wpływa na to, czego szukasz w kontakcie z innymi. Zaufanie rośnie najszybciej, gdy jesteś przewidywalny — nie idealny.`
+        : `Moon in ${moonSign} shapes how you regulate emotions in relationships. Your ${top1Label} metric influences what you seek in contact with others. Trust grows fastest when you are predictable — not perfect.`,
       questions: [
         isPl
-          ? `Ktora relacja najbardziej potrzebuje teraz: ${agreeableness?.growthPath ?? 'uczciwej rozmowy'}?`
-          : `Which relationship currently needs the ${agreeableness?.growthPath ?? 'next honest conversation'}?`,
+          ? 'Które relacje w Twoim życiu są oparte na prawdziwym zaufaniu? Co je buduje?'
+          : 'Which relationships in your life are built on genuine trust? What builds them?',
         isPl
-          ? 'Jakie uczucie warto nazwac, zanim przejdziesz do rozwiazan?'
-          : 'What feeling is important to acknowledge before discussing solutions?',
+          ? 'Kiedy ostatnio wyraziłeś potrzebę wprost, zamiast czekać, że ktoś ją odgadnie?'
+          : 'When did you last express a need directly, instead of waiting for someone to guess it?',
         isPl
-          ? 'Jaka granica poprawilaby przewidywalnosc po obu stronach?'
-          : 'What boundary would improve reliability for both sides of the relationship?',
+          ? 'Jedna zmiana w tym, jak komunikujesz się z bliskim, która poprawiłaby jakość tej relacji?'
+          : 'One change in how you communicate with someone close that would improve the quality of that relationship?',
       ],
       linkedDimensions: ['Agreeableness', 'Emotional Stability'],
       motivationLens: 'relatedness',
     },
-    {
-      id: 'insight-career-1',
-      category: 'career',      
-      title: isPl ? 'Jakosc realizacji i pewnosc dzialania' : 'Execution quality and confidence',
-      whyItMatters: isPl
-        ? 'Sumiennosc rosnie przez petle informacji zwrotnej, nie sam wysilek. Lepsze wyniki pojawiaja sie, gdy rytm pracy pasuje do Twojej dynamiki, a postep mierzysz prostymi wskaznikami.'
-        : `Conscientiousness grows through feedback loops, not just effort. Your pattern suggests better outcomes when workload design matches your natural rhythm and when progress is measured with simple, repeatable indicators.`,
-      questions: [
-        isPl
-          ? `Ktora czesc tygodnia najlepiej wspiera ${conscientiousness?.resource ?? 'regularne domykanie'}?`
-          : `Which part of your week supports ${conscientiousness?.resource ?? 'steady follow-through'} most consistently?`,
-        isPl
-          ? 'Jaki miernik pokaze poprawe procesu, nie tylko ilosci pracy?'
-          : 'What metric would show that your process is improving, not only your output volume?',
-        isPl
-          ? 'Ktore zadanie mozesz przeprojektowac, by zmniejszyc tarcie?'
-          : 'What task can be redesigned to reduce friction before motivation drops?',
-      ],
-      linkedDimensions: ['Conscientiousness'],
-      motivationLens: 'competence',
-    },
-    {
-      id: 'insight-stress-1',
-      category: 'stress',
-      title: isPl ? 'Regulacja przed decyzja' : 'Recovery pattern before decision pattern',
-      whyItMatters: isPl
-        ? 'Stabilnosc emocjonalna wzmacnia sie, gdy sygnaly stresu sa zauwazane wczesnie. Szybkie reakcje moga dawac pozor skutecznosci, ale czesto zawezaja perspektywe. Krotka regulacja poprawia decyzje i ton relacji.'
-        : `Emotional stability is strengthened when stress signals are processed early. Your risk patterns show that fast reactions can feel productive but often reduce perspective, while short regulation routines improve judgment and relationship tone.`,
-      questions: [
-        isPl
-          ? `Jaki sygnal pokazuje, ze narasta ${emotionalStability?.shadow ?? 'reaktywnosc'}?`
-          : `What signal tells you that ${emotionalStability?.shadow ?? 'reactivity'} is rising?`,
-        isPl
-          ? 'Jaki 3-minutowy reset mozesz wykonac przed kolejna wazna odpowiedzia?'
-          : 'What three-minute reset can you run before your next important reply?',
-        isPl
-          ? 'Ktore oczekiwanie mozna renegocjowac bez szkody dla priorytetow?'
-          : 'Which expectation can be renegotiated without harming your core priorities?',
-      ],
-      linkedDimensions: ['Emotional Stability'],
-      motivationLens: 'autonomy',
-    },
+    // ── RELATIONSHIPS 2 ─────────────────────────────────────────────────────────────────
     {
       id: 'insight-relationships-2',
       category: 'relationships',
-      title: isPl ? 'Energia spoleczna i wplyw' : 'Social energy and influence',
+      title: isPl ? 'Granice i energia społeczna' : 'Boundaries and social energy',
       whyItMatters: isPl
-        ? 'Ekstrawersja w Twoim profilu jest selektywna, a nie stala. Wplyw rośnie, gdy cel jest jasny, przygotowanie celowe, a rozmowa laczy strukture z uwaznym sluchaniem.'
-        : `Extraversion in your profile appears selective rather than constant. You influence best when purpose is clear, preparation is intentional, and dialogue leaves room for both structure and listening.`,
+        ? `Twoja metryka ${top1Label} jest wysoka. To oznacza, że masz dużo do dania w relacjach. Ale wysoka energia społeczna bez granic to przepis na wypalenie. Granice nie niszczą relacji — one je chronią.`
+        : `Your ${top1Label} metric is high. That means you have a lot to give in relationships. But high social energy without boundaries is a recipe for burnout. Boundaries don't destroy relationships — they protect them.`,
       questions: [
         isPl
-          ? `Gdzie ${extraversion?.resource ?? 'komunikacja z celem'} moze poprawic zgranie w tym tygodniu?`
-          : `Where can ${extraversion?.resource ?? 'purpose-driven communication'} create better alignment this week?`,
+          ? 'Która relacja w Twoim życiu pobiera więcej energii niż daje? Co z tym zrobisz?'
+          : 'Which relationship in your life takes more energy than it gives? What will you do about it?',
         isPl
-          ? 'Ktory komunikat trzeba skrocic, aby byl bardziej przekonujacy?'
-          : 'What message needs to be concise before it can be persuasive?',
+          ? 'Jaka granica, którą mógłbyś postawić teraz, poprawiłaby jakość Twojego życia?'
+          : 'What boundary, if you set it now, would improve the quality of your life?',
         isPl
-          ? 'Jak zaprosic do wspolpracy zamiast brac wszystko na siebie?'
-          : 'How can you invite collaboration instead of carrying full responsibility alone?',
+          ? 'Jak wygląda dla Ciebie regeneracja po intensywnym kontakcie społecznym?'
+          : 'What does recovery look like for you after intense social contact?',
       ],
       linkedDimensions: ['Extraversion', 'Agreeableness'],
       motivationLens: 'relatedness',
     },
+    // ── STRESS 1 ────────────────────────────────────────────────────────────────────────
     {
-      id: 'insight-career-2',
-      category: 'career',
-      title: isPl ? 'Architektura motywacji' : 'Motivation architecture',
+      id: 'insight-stress-1',
+      category: 'stress',
+      title: isPl ? 'Twój sygnał alarmowy' : 'Your early warning signal',
       whyItMatters: isPl
-        ? 'Trwala motywacja rosnie, gdy w tygodniu obecne sa autonomia, kompetencja i relacyjnosc. Profil dziala najlepiej, gdy laczysz samodzielne decyzje z mierzalnym postepem i wsparciem.'
-        : `Sustainable motivation increases when autonomy, competence, and relatedness are all represented in your week. Your profile is strongest when you pair self-directed decisions with measurable progress and high-quality support.`,
+        ? `Pod stresem Twoja najszałbsza metryka — ${low1Label} — spada jako pierwsza. To jest Twój sygnał alarmowy. Nie czekaj, aż będziesz wypalony. Naucz się rozpoznawać ten sygnał wcześnie i reagować na niego jednym konkretnym działaniem.`
+        : `Under stress, your weakest metric — ${low1Label} — drops first. That is your early warning signal. Don't wait until you're burned out. Learn to recognize this signal early and respond with one concrete action.`,
       questions: [
         isPl
-          ? 'Ktora decyzja w tym tygodniu bedzie w pelni zgodna z Twoimi wartosciami?'
-          : 'Which decision this week will be fully self-chosen by your own values?',
+          ? `Jak wygląda u Ciebie spadek ${low1Label}? Jakie zachowania to sygnalizują?`
+          : `What does a drop in ${low1Label} look like for you? What behaviors signal it?`,
         isPl
-          ? 'Gdzie mozesz pokazac postep jednym obiektywnym punktem kontrolnym?'
-          : 'Where can you make progress more visible with one objective checkpoint?',
+          ? 'Jedno działanie, które możesz wykonać w ciągu 5 minut, gdy poczujesz ten sygnał?'
+          : 'One action you can take in 5 minutes when you feel this signal?',
         isPl
-          ? 'Kto moze dac feedback, ktory wyostrzy kolejny krok?'
-          : 'Who can offer useful feedback that sharpens your next step?',
+          ? 'Kto w Twoim życiu widzi ten sygnał wcześniej niż Ty? Czy możesz go zapytać o feedback?'
+          : 'Who in your life sees this signal before you do? Can you ask them for feedback?',
       ],
-      linkedDimensions: ['Openness', 'Conscientiousness', 'Emotional Stability'],
-      motivationLens: 'competence',
+      linkedDimensions: ['Emotional Stability', 'Conscientiousness'],
+      motivationLens: 'autonomy',
+    },
+    // ── STRESS 2 ────────────────────────────────────────────────────────────────────────
+    {
+      id: 'insight-stress-2',
+      category: 'stress',
+      title: isPl ? 'Regeneracja jako strategia' : 'Recovery as strategy',
+      whyItMatters: isPl
+        ? `Księżyc w ${moonSign} kształtuje to, jak się regenerujesz. Nie każda metoda działa dla każdego. Twój wzorzec sugeruje, że regeneracja jest skuteczna, gdy jest aktywna i celowa — nie pasywna. Odpoczynek to nie lenistwo. To inwestycja w jakość następnego dnia.`
+        : `Moon in ${moonSign} shapes how you recover. Not every method works for everyone. Your pattern suggests that recovery is most effective when it is active and intentional — not passive. Rest is not laziness. It's an investment in the quality of your next day.`,
+      questions: [
+        isPl
+          ? 'Jakie działanie najszybciej przywraca Ci energię po trudnym dniu?'
+          : 'What activity most quickly restores your energy after a difficult day?',
+        isPl
+          ? 'Kiedy ostatnio wziąłeś prawdziwy odpoczynek — bez poczucia winy?'
+          : 'When did you last take genuine rest — without guilt?',
+        isPl
+          ? 'Jak możesz wbudować 20 minut regeneracji w każdy dzień, bez negocjacji?'
+          : 'How can you build 20 minutes of recovery into every day, non-negotiably?',
+      ],
+      linkedDimensions: ['Emotional Stability', 'Agreeableness'],
+      motivationLens: 'autonomy',
     },
   ];
 }
